@@ -1,0 +1,19 @@
+PHISHING AWARENESS PROGRAM - ACADEMIC STUDY NOTES
+=================================================
+
+This project is built as an educational portal to raise cybersecurity awareness.
+Here are reference sources and details on Phishing taxonomy:
+
+1. Phishing Overview:
+   Phishing represents a form of social engineering where attackers manipulate users into acting against their own security interests.
+   
+2. Core Categories of Social Engineering:
+   - Authority: Impersonating IT admins, bank authorities, or government agents.
+   - Urgency: Threatening account suspension, parcel returns, or penalties within tight timeframes (e.g., 24 hours).
+   - Social Proof: Tricking targets into believing others have already performed the action.
+   - Scarcity: Offering limited-time benefits or items to spark quick clicks.
+
+3. Reference Guidelines:
+   - NIST SP 800-53 (Security and Privacy Controls for Information Systems)
+   - OWASP Top 10 Client-Side Phishing & Impersonation Mitigation standards.
+   - SANS Security Awareness Training recommendations.
