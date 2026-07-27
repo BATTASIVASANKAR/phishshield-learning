@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Phishing Awareness Program - Learn how to identify and defend against phishing attacks, including email phishing, spear phishing, smishing, and vishing. Take the cybersecurity quiz!">
+    <title>PhishShield | Phishing Awareness & Cyber Defense Program</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cyber Grid Background Animation Overlay -->
+    <div class="cyber-grid"></div>
+    <div class="cyber-glow"></div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-shield-halved logo-icon"></i>
+                <span>PHISH<span class="accent-text">SHIELD</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about-phishing" class="nav-link">What is Phishing?</a></li>
+                    <li><a href="#types" class="nav-link">Types</a></li>
+                    <li><a href="#identify" class="nav-link">Identify</a></li>
+                    <li><a href="#security-tips" class="nav-link">Tips</a></li>
+                    <li><a href="#examples" class="nav-link">Examples</a></li>
+                    <li><a href="#quiz-section" class="nav-link">Quiz</a></li>
+                    <li><a href="#about-project" class="nav-link">About Project</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge fade-in"><i class="fa-solid fa-circle-radiation badge-icon"></i> Cyber Defense Initiative</span>
+                    <h1 class="hero-title fade-in">Defend Against The <span class="gradient-text">Digital Hooks</span></h1>
+                    <p class="hero-subtitle fade-in">Phishing remains the #1 entry point for cyberattacks. Equip yourself with the knowledge to detect, dissect, and defeat deceptive attacks online.</p>
+                    <div class="hero-buttons fade-in">
+                        <a href="#about-phishing" class="btn btn-primary">Start Learning <i class="fa-solid fa-arrow-right btn-icon"></i></a>
+                        <a href="#quiz-section" class="btn btn-secondary">Test Your Skills <i class="fa-solid fa-trophy btn-icon"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper fade-in">
+                    <div class="hero-shield-art">
+                        <div class="shield-circle layer-1"></div>
+                        <div class="shield-circle layer-2"></div>
+                        <div class="shield-circle layer-3"></div>
+                        <div class="shield-main">
+                            <i class="fa-solid fa-user-shield main-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <span class="scroll-text">Scroll to explore</span>
+            </div>
+        </section>
+
+        <!-- What is Phishing? Section -->
+        <section id="about-phishing" class="section">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Cyber Basics</span>
+                    <h2 class="section-title">What is Phishing?</h2>
+                    <p class="section-subtitle">Understanding the psychology and mechanisms behind modern social engineering attacks.</p>
+                </div>
+                
+                <div class="grid-2 scroll-reveal">
+                    <div class="about-text-content">
+                        <h3>A Deceptive Cyber Threat</h3>
+                        <p>Phishing is a form of social engineering where attackers impersonate trustworthy entities (like banks, IT departments, or utilities) to trick individuals into revealing sensitive credentials, installing malware, or transferring funds.</p>
+                        <p>Instead of hacking through complex security barriers directly, cybercriminals exploit the weakest link in the security chain: <strong>human trust</strong>.</p>
+                        
+                        <div class="mechanics-list">
+                            <div class="mechanic-item">
+                                <div class="mechanic-icon-box"><i class="fa-solid fa-mask"></i></div>
+                                <div>
+                                    <h4>Impersonation</h4>
+                                    <p>Spoofing branding, logos, and sender details to look legitimate.</p>
+                                </div>
+                            </div>
+                            <div class="mechanic-item">
+                                <div class="mechanic-icon-box"><i class="fa-solid fa-hourglass-half"></i></div>
+                                <div>
+                                    <h4>Urgency & Fear</h4>
+                                    <p>Creating false emergencies (e.g. account suspension) to force quick action.</p>
+                                </div>
+                            </div>
+                            <div class="mechanic-item">
+                                <div class="mechanic-icon-box"><i class="fa-solid fa-key"></i></div>
+                                <div>
+                                    <h4>Credential Harvesting</h4>
+                                    <p>Directing users to fake login pages specifically designed to steal passwords.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-stats-panel">
+                        <div class="stat-card">
+                            <span class="stat-num">90%</span>
+                            <p class="stat-desc">Of all corporate data breaches start with a phishing email.</p>
+                        </div>
+                        <div class="stat-card accent">
+                            <span class="stat-num">3.4B</span>
+                            <p class="stat-desc">Phishing emails are sent worldwide every single day.</p>
+                        </div>
+                        <div class="info-terminal">
+                            <div class="terminal-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="terminal-title">threat_db_check.sh</span>
+                            </div>
+                            <div class="terminal-body">
+                                <p class="term-line"><span class="term-prompt">$</span> ./check_phishing_trends.sh</p>
+                                <p class="term-line term-success">[!] Scan Active: Monitoring digital threats...</p>
+                                <p class="term-line term-warning">[WARNING] AI-Generated phishing campaigns are rising.</p>
+                                <p class="term-line term-info">[INFO] Targets are often redirected to clone sites.</p>
+                                <p class="term-line term-success">[OK] Human defense remains the strongest countermeasure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Types of Phishing Section -->
+        <section id="types" class="section alt-bg">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Attack Vectors</span>
+                    <h2 class="section-title">Common Types of Phishing</h2>
+                    <p class="section-subtitle">Cybercriminals deploy a wide array of methods across different communication channels. Know your enemy.</p>
+                </div>
+
+                <div class="grid-4 scroll-reveal">
+                    <!-- Email Phishing -->
+                    <div class="card type-card">
+                        <div class="card-icon-wrapper red-glow">
+                            <i class="fa-solid fa-envelope-open-text card-icon"></i>
+                        </div>
+                        <h3>Email Phishing</h3>
+                        <p class="card-meta">Mass Campaign</p>
+                        <p>Mass-scale spam emails that impersonate services (like PayPal, Netflix, or banks) designed to harvest login credentials from the general public.</p>
+                        <div class="card-footer-info">
+                            <span class="danger-level"><i class="fa-solid fa-skull-crossbones"></i> High Risk</span>
+                        </div>
+                    </div>
+
+                    <!-- Spear Phishing -->
+                    <div class="card type-card">
+                        <div class="card-icon-wrapper cyan-glow">
+                            <i class="fa-solid fa-bullseye card-icon"></i>
+                        </div>
+                        <h3>Spear Phishing</h3>
+                        <p class="card-meta">Targeted Attack</p>
+                        <p>Highly customized emails directed at specific individuals. Attackers research targets (using LinkedIn, social media) to craft convincing personal storylines.</p>
+                        <div class="card-footer-info">
+                            <span class="danger-level"><i class="fa-solid fa-skull-crossbones"></i> Critical Risk</span>
+                        </div>
+                    </div>
+
+                    <!-- Smishing -->
+                    <div class="card type-card">
+                        <div class="card-icon-wrapper yellow-glow">
+                            <i class="fa-solid fa-comment-sms card-icon"></i>
+                        </div>
+                        <h3>Smishing (SMS)</h3>
+                        <p class="card-meta">Mobile Message</p>
+                        <p>Phishing attempts conducted via SMS texts. They often claim package deliveries are blocked, or bank transactions require immediate verification links.</p>
+                        <div class="card-footer-info">
+                            <span class="danger-level"><i class="fa-solid fa-skull-crossbones"></i> Moderate-High</span>
+                        </div>
+                    </div>
+
+                    <!-- Vishing -->
+                    <div class="card type-card">
+                        <div class="card-icon-wrapper purple-glow">
+                            <i class="fa-solid fa-phone-volume card-icon"></i>
+                        </div>
+                        <h3>Vishing (Voice)</h3>
+                        <p class="card-meta">Phone Call</p>
+                        <p>Voice-based calls where attackers use spoofed phone numbers, pre-recorded messages, or AI voice cloning to impersonate bank representatives or tax authorities.</p>
+                        <div class="card-footer-info">
+                            <span class="danger-level"><i class="fa-solid fa-skull-crossbones"></i> High Risk</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Identify Phishing Section -->
+        <section id="identify" class="section">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Anatomy of Deception</span>
+                    <h2 class="section-title">How to Spot the Red Flags</h2>
+                    <p class="section-subtitle">Phishing scams are designed to look identical to official notices. Learn to spot the hidden indicators of fraud.</p>
+                </div>
+
+                <div class="grid-2 scroll-reveal">
+                    <div class="indicators-explain">
+                        <h3>Red Flag Checklist</h3>
+                        <p>Phishers want you to act emotionally and instantly. Watch out for these 5 classic red flags in any incoming email or message:</p>
+                        
+                        <ul class="styled-checklist">
+                            <li>
+                                <span class="chk-num">01</span>
+                                <div>
+                                    <strong>Suspicious Sender Domains:</strong>
+                                    <p>Always inspect the domain after the "@". Spoofed addresses look like `billing@paypa1.com` instead of `paypal.com`.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="chk-num">02</span>
+                                <div>
+                                    <strong>Urgent or Threatening Language:</strong>
+                                    <p>Sentences like "ACT NOW OR YOUR ACCOUNT WILL BE CLOSED!" are designed to cause panic and bypass logical thinking.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="chk-num">03</span>
+                                <div>
+                                    <strong>Generic Greetings:</strong>
+                                    <p>"Dear Valued Customer" or "Dear User" are used because mass-campaign phishers don't know your actual name.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="chk-num">04</span>
+                                <div>
+                                    <strong>Masked or Misdirected Hyperlinks:</strong>
+                                    <p>The text of the link says `paypal.com`, but hovering your mouse over it shows a completely different, suspicious destination URL.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="chk-num">05</span>
+                                <div>
+                                    <strong>Unsolicited Attachments:</strong>
+                                    <p>Invoices, receipts, or PDF/ZIP attachments you didn't ask for. Opening them can run scripts that infect your machine with malware.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="visual-interactive-spotter">
+                        <div class="card interactive-email-card">
+                            <div class="email-card-header">
+                                <div class="email-actions">
+                                    <span class="action-dot"></span>
+                                    <span class="action-dot"></span>
+                                    <span class="action-dot"></span>
+                                </div>
+                                <span class="email-title-text"><i class="fa-solid fa-envelope"></i> Suspicious Email Simulation</span>
+                            </div>
+                            
+                            <div class="email-meta-block">
+                                <div class="meta-row">
+                                    <span class="meta-label">From:</span>
+                                    <span class="meta-val highlight-target" data-flag="sender">
+                                        Netflix Account Security &lt;security-alert@netflix-billing.net&gt; 
+                                        <i class="fa-solid fa-circle-exclamation flag-icon"></i>
+                                    </span>
+                                </div>
+                                <div class="meta-row">
+                                    <span class="meta-label">To:</span>
+                                    <span class="meta-val">recipient@usermail.com</span>
+                                </div>
+                                <div class="meta-row">
+                                    <span class="meta-label">Subject:</span>
+                                    <span class="meta-val highlight-target" data-flag="subject">
+                                        URGENT: Suspended Account Notice (Action Required in 24h)
+                                        <i class="fa-solid fa-circle-exclamation flag-icon"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="email-content-block">
+                                <p class="highlight-target" data-flag="greeting">
+                                    Dear Netflix Customer,
+                                    <i class="fa-solid fa-circle-exclamation flag-icon"></i>
+                                </p>
+                                <p>We were unable to process your subscription renewal payment for this month. Your streaming services will be permanently suspended within 24 hours unless you update your card information.</p>
+                                
+                                <div class="text-center py-10">
+                                    <a href="#" onclick="return false;" class="fake-email-btn highlight-target" data-flag="button">
+                                        Update Payment Info Now
+                                        <i class="fa-solid fa-circle-exclamation flag-icon"></i>
+                                    </a>
+                                    <div class="hover-tooltip" id="buttonTooltip">Link Destination: <span class="url-text">http://secure-billing-netflix-accounts-refresh.com/login</span></div>
+                                </div>
+
+                                <p>If you have any questions, you can download the invoice summary attached below for full details.</p>
+                                
+                                <div class="attachment-box highlight-target" data-flag="attachment">
+                                    <i class="fa-regular fa-file-pdf attachment-icon"></i>
+                                    <div class="attachment-meta">
+                                        <span class="attachment-name">invoice_renew_details_july2026.pdf.exe</span>
+                                        <span class="attachment-size">4.2 MB</span>
+                                    </div>
+                                    <i class="fa-solid fa-circle-exclamation flag-icon"></i>
+                                </div>
+                            </div>
+
+                            <!-- Flag Detail Card Overlay -->
+                            <div class="flag-detail-card" id="flagDetailCard">
+                                <div class="flag-detail-header">
+                                    <h4 id="flagDetailTitle">Red Flag Identified</h4>
+                                    <button class="close-flag-btn" id="closeFlagBtn">&times;</button>
+                                </div>
+                                <p id="flagDetailDesc">Click on any highlighted element in the email simulator to analyze the red flags!</p>
+                            </div>
+                        </div>
+                        <p class="helper-text"><i class="fa-solid fa-hand-pointer"></i> Click on the <span class="glow-span">red highlighted parts</span> of the email above to dissect the threats!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Tips Section -->
+        <section id="security-tips" class="section alt-bg">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Defensive Action</span>
+                    <h2 class="section-title">Security Tips & Best Practices</h2>
+                    <p class="section-subtitle">Building active security habits keeps you protected even if you accidentally click a malicious link.</p>
+                </div>
+
+                <div class="grid-3 scroll-reveal">
+                    <!-- Tip 1 -->
+                    <div class="tip-card">
+                        <div class="tip-header">
+                            <i class="fa-solid fa-key tip-icon"></i>
+                            <h3>1. Turn on Multi-Factor (MFA)</h3>
+                        </div>
+                        <p>Enable MFA on all accounts. Even if a phisher steals your login name and password, they cannot gain entry without the dynamic verification code sent to your authenticator app.</p>
+                    </div>
+
+                    <!-- Tip 2 -->
+                    <div class="tip-card">
+                        <div class="tip-header">
+                            <i class="fa-solid fa-compass tip-icon"></i>
+                            <h3>2. Check Link Addresses</h3>
+                        </div>
+                        <p>Hover over hyperlinks before clicking to see the actual target URL in the bottom status bar. If the URL doesn't match the company's real domain, do not click.</p>
+                    </div>
+
+                    <!-- Tip 3 -->
+                    <div class="tip-card">
+                        <div class="tip-header">
+                            <i class="fa-solid fa-vault tip-icon"></i>
+                            <h3>3. Use Password Managers</h3>
+                        </div>
+                        <p>Password managers auto-fill credentials based on the exact registered URL. If you land on a fake site (e.g., netflx.com), the manager will refuse to autofill, indicating a phishing attempt.</p>
+                    </div>
+
+                    <!-- Tip 4 -->
+                    <div class="tip-card">
+                        <div class="tip-header">
+                            <i class="fa-solid fa-circle-exclamation tip-icon"></i>
+                            <h3>4. Stop & Think Under Urgency</h3>
+                        </div>
+                        <p>Scammers intentionally use high pressure to trigger impulse reactions. Take a deep breath. Stop, look up the official customer service contact, and verify independently.</p>
+                    </div>
+
+                    <!-- Tip 5 -->
+                    <div class="tip-card">
+                        <div class="tip-header">
+                            <i class="fa-solid fa-server tip-icon"></i>
+                            <h3>5. Keep Devices Updated</h3>
+                        </div>
+                        <p>Install updates for your web browsers, operating system, and security software. Updates patch security vulnerabilities that attackers exploit when you visit infected sites.</p>
+                    </div>
+
+                    <!-- Tip 6 -->
+                    <div class="tip-card">
+                        <div class="tip-header">
+                            <i class="fa-solid fa-shield-virus tip-icon"></i>
+                            <h3>6. Report Phishing Campaigns</h3>
+                        </div>
+                        <p>If you spot a phishing email at work or on private accounts, report it to your IT helpdesk, or forward email spams to the company's official security inbox (e.g. abuse@bank.com).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real-Life Examples Section -->
+        <section id="examples" class="section">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Case Studies</span>
+                    <h2 class="section-title">Real-Life Phishing Scenarios</h2>
+                    <p class="section-subtitle">Compare a real corporate notification against a fraudulent copycat side-by-side.</p>
+                </div>
+
+                <div class="tabs-container scroll-reveal">
+                    <div class="tabs-buttons">
+                        <button class="tab-btn active" data-tab="tab-paypal">
+                            <i class="fa-brands fa-paypal"></i> PayPal Account Alert
+                        </button>
+                        <button class="tab-btn" data-tab="tab-delivery">
+                            <i class="fa-solid fa-truck"></i> Package Courier Text
+                        </button>
+                    </div>
+
+                    <!-- Tab PayPal -->
+                    <div class="tab-content active" id="tab-paypal">
+                        <div class="grid-2">
+                            <div class="comparison-card secure">
+                                <div class="comp-badge secure"><i class="fa-solid fa-circle-check"></i> Legitimate Bank Notice</div>
+                                <div class="comp-email-mockup">
+                                    <div class="comp-header">
+                                        <div><strong>From:</strong> service@paypal.com</div>
+                                        <div><strong>Greeting:</strong> Dear John Doe (Personalized)</div>
+                                    </div>
+                                    <div class="comp-body">
+                                        <p>Your monthly account statement is ready. Log in to your account at paypal.com to view details. We will never ask you to input credit card details via direct links in this mail.</p>
+                                        <div class="text-center">
+                                            <span class="comp-btn comp-safe">Go To PayPal.com</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comp-verdict">
+                                    <h4>Safe Signs:</h4>
+                                    <ul>
+                                        <li>Sent from the verified official domain (`@paypal.com`).</li>
+                                        <li>Addressed to your full registered name (`Dear John Doe`).</li>
+                                        <li>Does not request high-security inputs (like passwords or full credit card digits) directly in links.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="comparison-card insecure">
+                                <div class="comp-badge insecure"><i class="fa-solid fa-circle-xmark"></i> Phishing Clone</div>
+                                <div class="comp-email-mockup">
+                                    <div class="comp-header">
+                                        <div><strong>From:</strong> updates-paypal@paypa1-support-billing.com</div>
+                                        <div><strong>Greeting:</strong> Dear User (Generic)</div>
+                                    </div>
+                                    <div class="comp-body">
+                                        <p>YOUR ACCOUNT HAS BEEN TEMPORARILY BLOCKED due to suspicious activity. Confirm your credentials now to reactivate and verify identity immediately.</p>
+                                        <div class="text-center">
+                                            <span class="comp-btn comp-danger">Unlock Account Now</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comp-verdict">
+                                    <h4>Malicious Signs:</h4>
+                                    <ul>
+                                        <li>Spelled incorrectly domain name (`paypa1-support-billing.com`).</li>
+                                        <li>Extreme threat level used to induce instant panic.</li>
+                                        <li>Generic greeting is used instead of your name.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Delivery -->
+                    <div class="tab-content" id="tab-delivery">
+                        <div class="grid-2">
+                            <div class="comparison-card secure">
+                                <div class="comp-badge secure"><i class="fa-solid fa-circle-check"></i> Official Tracking Text</div>
+                                <div class="phone-mockup">
+                                    <div class="phone-screen">
+                                        <div class="sms-sender">USPS Notification</div>
+                                        <div class="sms-bubble received">
+                                            USPS Status: Package 9400111899562721839212 is out for delivery. Monitor status at usps.com/tracking. No action needed.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comp-verdict">
+                                    <h4>Safe Signs:</h4>
+                                    <ul>
+                                        <li>Contains valid, trackable order numbers.</li>
+                                        <li>Link directs to the official base domain (`usps.com`).</li>
+                                        <li>No immediate fees are demanded.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="comparison-card insecure">
+                                <div class="comp-badge insecure"><i class="fa-solid fa-circle-xmark"></i> Smishing Text Attack</div>
+                                <div class="phone-mockup">
+                                    <div class="phone-screen">
+                                        <div class="sms-sender">+1 (405) 555-8912</div>
+                                        <div class="sms-bubble received warning-bubble">
+                                            USPS Alerts: Your shipment is on hold due to wrong address details. Pay $1.50 redirection fees within 12 hours or item returns to sender: post-office-redirection-fees.info/pay
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comp-verdict">
+                                    <h4>Malicious Signs:</h4>
+                                    <ul>
+                                        <li>Sent from a generic mobile number rather than shortcode gateway.</li>
+                                        <li>Redirect URL matches a sketchy non-governmental site (`post-office-redirection-fees.info`).</li>
+                                        <li>Urgent payment required to release delivery.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz-section" class="section alt-bg">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Interactive Test</span>
+                    <h2 class="section-title">Cybersecurity Awareness Quiz</h2>
+                    <p class="section-subtitle">Put your knowledge to the test and see if you can differentiate between real communications and cyber threats.</p>
+                </div>
+
+                <div class="quiz-outer-container scroll-reveal">
+                    <div class="card quiz-card" id="quizCard">
+                        <!-- Screen 1: Welcome -->
+                        <div class="quiz-screen active" id="quizWelcomeScreen">
+                            <div class="quiz-intro-content">
+                                <div class="quiz-badge-icon"><i class="fa-solid fa-shield-virus"></i></div>
+                                <h3>Become a Cyber Sentinel</h3>
+                                <p>This awareness assessment consists of <strong>5 multiple-choice questions</strong> based on real-world phishing scenarios. Take your time, analyze the details, and prove your cybersecurity knowledge.</p>
+                                <ul class="quiz-rules">
+                                    <li><i class="fa-solid fa-check"></i> Immediate correct/incorrect feedback</li>
+                                    <li><i class="fa-solid fa-check"></i> Interactive analysis explanations for each scenario</li>
+                                    <li><i class="fa-solid fa-check"></i> Scorecard summary grading your defense readiness</li>
+                                </ul>
+                                <button class="btn btn-primary btn-large" id="startQuizBtn">Start Assessment <i class="fa-solid fa-play btn-icon"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Screen 2: Question -->
+                        <div class="quiz-screen" id="quizQuestionScreen">
+                            <div class="quiz-progress-bar-wrapper">
+                                <div class="quiz-progress-header">
+                                    <span class="question-tracker" id="questionTracker">Question 1 of 5</span>
+                                    <span class="score-tracker" id="scoreTracker">Score: 0</span>
+                                </div>
+                                <div class="quiz-progress-bar">
+                                    <div class="quiz-progress-fill" id="quizProgressFill" style="width: 20%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="quiz-question-box">
+                                <h3 id="questionText">Question content goes here?</h3>
+                                
+                                <div class="quiz-options" id="quizOptionsContainer">
+                                    <!-- Options generated by script -->
+                                </div>
+                            </div>
+
+                            <div class="quiz-feedback-box hidden" id="quizFeedbackBox">
+                                <div class="feedback-indicator">
+                                    <i class="fa-solid" id="feedbackIcon"></i>
+                                    <span id="feedbackText">Correct!</span>
+                                </div>
+                                <p class="feedback-explanation" id="feedbackExplanation">Detailed explanation of the answers.</p>
+                            </div>
+
+                            <div class="quiz-footer">
+                                <button class="btn btn-secondary hidden" id="prevQuestionBtn">Previous</button>
+                                <button class="btn btn-primary" id="nextQuestionBtn" disabled>Next Question <i class="fa-solid fa-arrow-right btn-icon"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Screen 3: Results -->
+                        <div class="quiz-screen" id="quizResultsScreen">
+                            <div class="quiz-results-content">
+                                <div class="results-visual">
+                                    <svg class="progress-ring-svg" width="160" height="160">
+                                        <circle class="progress-ring-bg" stroke="#161D30" stroke-width="12" fill="transparent" r="70" cx="80" cy="80" />
+                                        <circle class="progress-ring-fill" id="resultsProgressRing" stroke="#00F2FE" stroke-width="12" stroke-dasharray="439.82" stroke-dashoffset="439.82" fill="transparent" r="70" cx="80" cy="80" />
+                                    </svg>
+                                    <div class="results-score-text">
+                                        <span class="score-percentage" id="scorePercent">0%</span>
+                                        <span class="score-fraction" id="scoreFraction">0/5 Correct</span>
+                                    </div>
+                                </div>
+
+                                <h3 id="resultsGradeTitle">Evaluation Complete</h3>
+                                <p class="results-summary-text" id="resultsSummaryText">Loading evaluation summaries...</p>
+                                
+                                <div class="review-box">
+                                    <h4>Quiz Summary Review:</h4>
+                                    <div id="quizReviewContainer">
+                                        <!-- Review cards rendered in JS -->
+                                    </div>
+                                </div>
+
+                                <div class="results-buttons">
+                                    <button class="btn btn-primary" id="restartQuizBtn"><i class="fa-solid fa-arrow-rotate-left btn-icon"></i> Retake Assessment</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about-project" class="section">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Project Overview</span>
+                    <h2 class="section-title">About the Initiative</h2>
+                    <p class="section-subtitle">Providing simple, clear tools to foster defense and cybersecurity vigilance.</p>
+                </div>
+
+                <div class="grid-2 scroll-reveal">
+                    <div class="about-desc">
+                        <h3>Virtual Internship Project</h3>
+                        <p>This Phishing Awareness web application was built to address the critical need for cyber hygiene training. It provides students, individuals, and professionals with a self-contained learning module designed to elevate detection abilities.</p>
+                        <p>By studying visual indicators, walking through simulated emails, and taking self-evaluations, users transition from passive targets to proactive digital defenders.</p>
+                        
+                        <div class="developer-card">
+                            <div class="dev-avatar">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <div class="dev-info">
+                                <h4>Cybersecurity Intern</h4>
+                                <p>Web Developer & Cybersecurity Enthusiast</p>
+                                <p class="dev-project-meta">CodSoft Virtual Internship Project Submission</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <h3>Key Implementation Details</h3>
+                        <ul class="styled-details-list">
+                            <li>
+                                <strong><i class="fa-solid fa-code accent-text"></i> Frontend Technologies:</strong>
+                                <span>Pure HTML5, CSS3 transitions, and Vanilla JS ES6 modules (No third-party libraries except FontAwesome icon styling).</span>
+                            </li>
+                            <li>
+                                <strong><i class="fa-solid fa-bolt accent-text"></i> Dynamic States:</strong>
+                                <span>Intersection Observers for scrolling triggers, DOM mutations for quiz structures, interactive state-listeners for active email spots.</span>
+                            </li>
+                            <li>
+                                <strong><i class="fa-solid fa-mobile-screen accent-text"></i> Accessibility & Layouts:</strong>
+                                <span>Fully responsive typography grids matching standard mobile overlays and desktop monitors.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <i class="fa-solid fa-shield-halved logo-icon"></i>
+                    <span>PHISH<span class="accent-text">SHIELD</span></span>
+                </a>
+                <p>Equipping individuals with essential defense strategies against modern social engineering threats.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Defensive Nav</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-phishing">What is Phishing?</a></li>
+                    <li><a href="#types">Types of Phishing</a></li>
+                    <li><a href="#identify">Anatomy & Identifiers</a></li>
+                    <li><a href="#quiz-section">Self Assessment</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-disclaimer">
+                <h4>Legal & Disclaimer</h4>
+                <p>This application is created solely for academic and training purposes. The phishing emails simulated within are fictitious security examples. No actual phishing campaigns are executed or endorsed by this project.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>
+                    Developed by Siva Sankar – Phishing Awareness Program<br>
+                    For educational and cybersecurity awareness purposes only.<br>
+                    Contact: +91 9666241489
+                </p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script File -->
+    <script src="js/script.js"></script>
+</body>
+</html>
