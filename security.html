@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security Hub | PhishShield</title>
+  <meta name="description" content="PhishShield Security Hub - Network Security Diagram, Live Password Strength Checker, Password Generator, Email Header Explorer, Banking & Cloud AI Security." />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  
+  <style>
+    .net-node {
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius-md);
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      cursor: pointer;
+      text-align: center;
+      transition: all var(--transition-fast);
+    }
+    .net-node.active, .net-node:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 15px rgba(0,240,255,0.3);
+      transform: translateY(-3px);
+    }
+    .email-header-key {
+      padding: 0.5rem 1rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--accent-cyan);
+      transition: all var(--transition-fast);
+    }
+    .email-header-key.active, .email-header-key:hover {
+      background: rgba(0,240,255,0.15);
+      border-color: var(--accent-cyan);
+    }
+    .checklist-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- GLOBAL NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-logo-icon"><i class="fas fa-shield-halved"></i></div>
+        <div class="brand-text">
+          <span class="brand-name">PHISH<span>SHIELD</span></span>
+          <span class="brand-tagline">Think Before You Click</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="attacks.html" class="nav-link">Cyber Attacks</a></div>
+        <div class="nav-item"><a href="ethical-hacking.html" class="nav-link">Ethical Hacking</a></div>
+        
+        <div class="nav-item has-dropdown">
+          <a href="security.html" class="nav-link active">Security <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+          <div class="mega-menu">
+            <a href="security.html#network" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-network-wired"></i></div>
+              <div><div class="mega-title">Network Security</div><div class="mega-desc">Firewalls, IDS/IPS, VPN, Diagrams</div></div>
+            </a>
+            <a href="security.html#banking" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-university"></i></div>
+              <div><div class="mega-title">Banking Security</div><div class="mega-desc">UPI fraud, QR scams, ATM skimming</div></div>
+            </a>
+            <a href="security.html#cloud" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-cloud-shield"></i></div>
+              <div><div class="mega-title">Cloud & AI Security</div><div class="mega-desc">AWS/Azure models & Deepfakes</div></div>
+            </a>
+            <a href="security.html#password" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-key"></i></div>
+              <div><div class="mega-title">Password Security</div><div class="mega-desc">Strength meter & generator</div></div>
+            </a>
+            <a href="security.html#email" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-envelope-open-text"></i></div>
+              <div><div class="mega-title">Email Security</div><div class="mega-desc">Header explorer, SPF/DKIM/DMARC</div></div>
+            </a>
+            <a href="security.html#browser" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-globe"></i></div>
+              <div><div class="mega-title">Browser Security</div><div class="mega-desc">HTTPS, SSL/TLS, Extensions</div></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item"><a href="labs.html" class="nav-link">Interactive Labs</a></div>
+        <div class="nav-item"><a href="tools.html" class="nav-link">Cyber Tools</a></div>
+        <div class="nav-item"><a href="roadmaps.html" class="nav-link">Roadmaps</a></div>
+        <div class="nav-item"><a href="quiz.html" class="nav-link">Quiz</a></div>
+        <div class="nav-item"><a href="glossary.html" class="nav-link">Glossary</a></div>
+        <div class="nav-item"><a href="resources.html" class="nav-link">Resources</a></div>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="user-xp-badge"><i class="fas fa-shield-alt"></i> Beginner</div>
+        <button class="action-btn search-trigger"><i class="fas fa-search"></i></button>
+        <button class="action-btn theme-toggle"><i class="fas fa-sun"></i></button>
+        <div class="mobile-toggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <section class="section container">
+      
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-shield-alt"></i> Security Defense Hub</span>
+        <h2 class="section-title">6 Core Security <span>Domains</span></h2>
+        <p class="section-subtitle">Interactive security architectures, live checkers, explorers, and checklists across 6 vital domains.</p>
+      </div>
+
+      <!-- 7.1 NETWORK SECURITY -->
+      <div id="network" style="margin-bottom:5rem;">
+        <h3 style="font-size:2rem; color:var(--text-primary); margin-bottom:1.5rem; display:flex; align-items:center; gap:0.75rem;">
+          <i class="fas fa-network-wired" style="color:var(--accent-cyan);"></i> 7.1 Network Security
+        </h3>
+
+        <!-- INTERACTIVE NETWORK DIAGRAM -->
+        <div class="glass-card" style="margin-bottom:2rem; padding:2rem;">
+          <h4 style="color:var(--accent-cyan); margin-bottom:1rem;"><i class="fas fa-project-diagram"></i> Interactive Network Defense Architecture</h4>
+          <p style="color:var(--text-secondary); font-size:0.92rem; margin-bottom:1.5rem;">Click any architecture node below to inspect its security role and traffic filtering mechanism:</p>
+
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; margin-bottom:2rem;">
+            <div class="net-node active" data-node="internet">
+              <i class="fas fa-globe" style="font-size:1.8rem; color:#ff3366; margin-bottom:0.5rem; display:block;"></i>
+              <strong>Public Internet</strong>
+            </div>
+            <i class="fas fa-arrow-right" style="color:var(--text-muted);"></i>
+            
+            <div class="net-node" data-node="firewall">
+              <i class="fas fa-fire-flame-curved" style="font-size:1.8rem; color:#00f0ff; margin-bottom:0.5rem; display:block;"></i>
+              <strong>Firewall</strong>
+            </div>
+            <i class="fas fa-arrow-right" style="color:var(--text-muted);"></i>
+
+            <div class="net-node" data-node="idsips">
+              <i class="fas fa-radar" style="font-size:1.8rem; color:#8b5cf6; margin-bottom:0.5rem; display:block;"></i>
+              <strong>IDS / IPS</strong>
+            </div>
+            <i class="fas fa-arrow-right" style="color:var(--text-muted);"></i>
+
+            <div class="net-node" data-node="internalnet">
+              <i class="fas fa-sitemap" style="font-size:1.8rem; color:#3b82f6; margin-bottom:0.5rem; display:block;"></i>
+              <strong>Internal DMZ / LAN</strong>
+            </div>
+            <i class="fas fa-arrow-right" style="color:var(--text-muted);"></i>
+
+            <div class="net-node" data-node="device">
+              <i class="fas fa-laptop" style="font-size:1.8rem; color:#10b981; margin-bottom:0.5rem; display:block;"></i>
+              <strong>Host Device</strong>
+            </div>
+          </div>
+
+          <div id="network-node-info">
+            <div class="glass-card" style="border-left:4px solid #ff3366; padding:1.25rem;">
+              <h4 style="font-size:1.2rem; color:var(--text-primary);">The Public Internet</h4>
+              <p style="color:var(--text-secondary); font-size:0.95rem;">The global wide area network housing web servers, public users, and potential threat actors transmitting encrypted or unencrypted packets.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7.2 BANKING SECURITY -->
+      <div id="banking" style="margin-bottom:5rem;">
+        <h3 style="font-size:2rem; color:var(--text-primary); margin-bottom:1.5rem; display:flex; align-items:center; gap:0.75rem;">
+          <i class="fas fa-university" style="color:var(--warning);"></i> 7.2 Banking Security
+        </h3>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:2rem;">
+          <div class="glass-card">
+            <h4 style="color:var(--warning); margin-bottom:1rem;"><i class="fas fa-exclamation-triangle"></i> Common Financial Scams</h4>
+            <ul style="color:var(--text-secondary); font-size:0.92rem; list-style:disc; margin-left:1.25rem;">
+              <li style="margin-bottom:0.5rem;"><strong>UPI Collect Fraud:</strong> Scammers send 'Collect Money' requests misleading victims into entering PIN to receive funds.</li>
+              <li style="margin-bottom:0.5rem;"><strong>QR Code Scam:</strong> Fake QR stickers at payment counters redirecting funds to fraud accounts.</li>
+              <li style="margin-bottom:0.5rem;"><strong>ATM Skimming:</strong> Physical hardware overlays on ATM card slots stealing magnetic stripe data.</li>
+              <li><strong>OTP Vishing:</strong> Fraud callers posing as bank managers urging victims to share SMS OTPs.</li>
+            </ul>
+          </div>
+
+          <div class="glass-card">
+            <h4 style="color:var(--success); margin-bottom:1rem;"><i class="fas fa-tasks"></i> Safe Banking Interactive Checklist</h4>
+            <div class="checklist-item"><input type="checkbox" id="b1" /> <label for="b1">Never share OTP or PIN over phone calls or SMS.</label></div>
+            <div class="checklist-item"><input type="checkbox" id="b2" /> <label for="b2">Remember: Entering UPI PIN is ONLY required to send money, never to receive money.</label></div>
+            <div class="checklist-item"><input type="checkbox" id="b3" /> <label for="b3">Enable SMS & Email transaction alerts for instant anomaly detection.</label></div>
+            <div class="checklist-item"><input type="checkbox" id="b4" /> <label for="b4">Inspect ATM card slots for loose plastic overlays before inserting card.</label></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7.3 CLOUD & AI SECURITY -->
+      <div id="cloud" style="margin-bottom:5rem;">
+        <h3 style="font-size:2rem; color:var(--text-primary); margin-bottom:1.5rem; display:flex; align-items:center; gap:0.75rem;">
+          <i class="fas fa-cloud-shield" style="color:var(--accent-purple);"></i> 7.3 Cloud & AI Security
+        </h3>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:2rem;">
+          <div class="glass-card">
+            <h4 style="color:var(--accent-purple); margin-bottom:1rem;"><i class="fas fa-cloud"></i> Cloud Service Models (SaaS / PaaS / IaaS)</h4>
+            <p style="color:var(--text-secondary); font-size:0.92rem; margin-bottom:1rem;">In cloud security, responsibility is shared between vendor and customer depending on the service tier:</p>
+            <ul style="color:var(--text-secondary); font-size:0.9rem; list-style:disc; margin-left:1.2rem;">
+              <li><strong>IaaS (AWS EC2 / Azure VMs):</strong> Customer manages OS, software patches, firewalls, and data.</li>
+              <li><strong>PaaS (Heroku / AWS Elastic Beanstalk):</strong> Customer manages code & data; vendor manages OS & runtime.</li>
+              <li><strong>SaaS (Google Workspace / M365):</strong> Vendor manages infrastructure; customer manages IAM user access.</li>
+            </ul>
+          </div>
+
+          <div class="glass-card">
+            <h4 style="color:var(--danger); margin-bottom:1rem;"><i class="fas fa-robot"></i> AI-Powered Cyber Threats</h4>
+            <ul style="color:var(--text-secondary); font-size:0.9rem; list-style:disc; margin-left:1.2rem;">
+              <li style="margin-bottom:0.5rem;"><strong>AI Phishing:</strong> LLMs crafting hyper-realistic, grammar-perfect phishing emails personalized from social media OSINT.</li>
+              <li style="margin-bottom:0.5rem;"><strong>Deepfake Video & Voice Cloning:</strong> Synthesizing CEO video calls to authorize fraudulent bank transfers.</li>
+              <li><strong>AI Malware Mutation:</strong> Automated code refactoring to bypass traditional signature antivirus.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7.4 PASSWORD SECURITY -->
+      <div id="password" style="margin-bottom:5rem;">
+        <h3 style="font-size:2rem; color:var(--text-primary); margin-bottom:1.5rem; display:flex; align-items:center; gap:0.75rem;">
+          <i class="fas fa-key" style="color:var(--accent-cyan);"></i> 7.4 Password Security & Live Tools
+        </h3>
+
+        <div style="display:grid; grid-template-columns: 1.2fr 0.8fr; gap:2rem;">
+          <!-- LIVE PASSWORD STRENGTH METER -->
+          <div class="glass-card">
+            <h4 style="color:var(--accent-cyan); margin-bottom:1rem;"><i class="fas fa-tachometer-alt"></i> Live Password Strength Analyzer</h4>
+            <div style="margin-bottom:1.25rem;">
+              <input type="password" id="pwd-input" placeholder="Type a password to test live entropy score..." style="width:100%; padding:0.85rem; background:rgba(0,0,0,0.3); border:1px solid var(--border-color); border-radius:var(--radius-md); color:var(--text-primary); font-family:var(--font-mono);" />
+            </div>
+
+            <!-- STRENGTH BAR -->
+            <div style="height:8px; background:rgba(255,255,255,0.1); border-radius:var(--radius-full); overflow:hidden; margin-bottom:0.5rem;">
+              <div id="pwd-strength-bar" style="height:100%; width:0%; transition:all 0.3s ease; background-color:#ff3366;"></div>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:1.25rem;">
+              <span style="color:var(--text-muted);">Entropy Security Level:</span>
+              <strong id="pwd-score-text" style="color:var(--text-muted);">Enter Password</strong>
+            </div>
+
+            <h5 style="color:var(--text-primary); margin-bottom:0.5rem;">Security Analysis Checklist:</h5>
+            <ul id="pwd-feedback" style="list-style:none;">
+              <li style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-circle" style="margin-right:0.4rem;"></i> At least 12 characters long</li>
+              <li style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-circle" style="margin-right:0.4rem;"></i> Includes Uppercase letters (A-Z)</li>
+              <li style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-circle" style="margin-right:0.4rem;"></i> Includes Lowercase letters (a-z)</li>
+              <li style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-circle" style="margin-right:0.4rem;"></i> Includes Numbers (0-9)</li>
+              <li style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-circle" style="margin-right:0.4rem;"></i> Includes Special Symbols (!@#$%^&*)</li>
+            </ul>
+          </div>
+
+          <!-- SECURE PASSWORD GENERATOR -->
+          <div class="glass-card">
+            <h4 style="color:var(--accent-purple); margin-bottom:1rem;"><i class="fas fa-shield-cat"></i> Secure Password Generator</h4>
+            <p style="color:var(--text-secondary); font-size:0.88rem; margin-bottom:1.25rem;">Generates 16-character high-entropy cryptographic random passwords using Web Crypto API. (Not stored locally).</p>
+            
+            <div style="display:flex; gap:0.5rem; margin-bottom:1rem;">
+              <input type="text" id="pwd-gen-result" readonly placeholder="Click generate..." style="flex:1; padding:0.75rem; background:rgba(0,0,0,0.3); border:1px solid var(--border-cyan); border-radius:var(--radius-sm); color:var(--accent-cyan); font-family:var(--font-mono); font-weight:700;" />
+              <button id="pwd-copy-btn" class="btn btn-outline btn-sm" title="Copy to Clipboard"><i class="fas fa-copy"></i></button>
+            </div>
+
+            <button id="pwd-gen-btn" class="btn btn-secondary btn-sm" style="width:100%;"><i class="fas fa-sync-alt"></i> Generate 16-Char Password</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7.5 EMAIL SECURITY -->
+      <div id="email" style="margin-bottom:5rem;">
+        <h3 style="font-size:2rem; color:var(--text-primary); margin-bottom:1.5rem; display:flex; align-items:center; gap:0.75rem;">
+          <i class="fas fa-envelope-open-text" style="color:var(--accent-blue);"></i> 7.5 Email Security & Header Explorer
+        </h3>
+
+        <div class="glass-card" style="padding:2rem;">
+          <h4 style="color:var(--accent-cyan); margin-bottom:1rem;"><i class="fas fa-search"></i> Interactive Email Header Explorer</h4>
+          <p style="color:var(--text-secondary); font-size:0.92rem; margin-bottom:1.5rem;">Click any header component below to reveal its technical security inspection function:</p>
+
+          <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+            <button class="email-header-key active" data-header="from">From Envelope</button>
+            <button class="email-header-key" data-header="replyto">Reply-To Header</button>
+            <button class="email-header-key" data-header="spf">SPF Verification</button>
+            <button class="email-header-key" data-header="dkim">DKIM Signature</button>
+            <button class="email-header-key" data-header="dmarc">DMARC Policy</button>
+            <button class="email-header-key" data-header="received">Received MTA Hops</button>
+          </div>
+
+          <div id="email-header-desc">
+            <div class="glass-card" style="border-left:4px solid var(--accent-cyan); padding:1rem;">
+              <h5 style="color:var(--accent-cyan); margin-bottom:0.4rem; text-transform:uppercase;">Header Field Breakdown</h5>
+              <p style="color:var(--text-secondary); font-size:0.9rem;">Sender envelope address (`From: security@paypal-verify-alert.com`). In phishing emails, this display name often spoof legitimate companies while the domain differs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7.6 BROWSER SECURITY -->
+      <div id="browser">
+        <h3 style="font-size:2rem; color:var(--text-primary); margin-bottom:1.5rem; display:flex; align-items:center; gap:0.75rem;">
+          <i class="fas fa-globe" style="color:var(--success);"></i> 7.6 Browser Security Checklist
+        </h3>
+
+        <div class="glass-card" style="padding:2rem;">
+          <h4 style="color:var(--success); margin-bottom:1rem;"><i class="fas fa-tasks"></i> Interactive Browser Hardening Checklist</h4>
+          <div class="checklist-item"><input type="checkbox" id="br1" /> <label for="br1">Verify HTTPS lock icon before submitting any passwords or credit card data.</label></div>
+          <div class="checklist-item"><input type="checkbox" id="br2" /> <label for="br2">Audit installed browser extensions every 30 days and remove unverified extensions.</label></div>
+          <div class="checklist-item"><input type="checkbox" id="br3" /> <label for="br3">Enable 'Block Third-Party Cookies' and automatic HTTPS redirection in browser settings.</label></div>
+          <div class="checklist-item"><input type="checkbox" id="br4" /> <label for="br4">Enable built-in Phishing & Malware Protection (e.g. Google Safe Browsing / Microsoft Defender SmartScreen).</label></div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>Developed by Siva Sankar – PhishGuard Security Tool</p>
+        <p>For educational and cybersecurity awareness purposes only.</p>
+        <p>For any suggestions, contact: 9666241489</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/security.js"></script>
+</body>
+</html>

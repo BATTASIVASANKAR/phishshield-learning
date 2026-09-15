@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & FAQ | PhishShield</title>
+  <meta name="description" content="Contact PhishShield cybersecurity team, submit feedback, or explore our interactive cybersecurity FAQ accordion." />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  
+  <style>
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-answer {
+      padding: 0 1.25rem 1.25rem 1.25rem;
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      display: none;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1rem;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- GLOBAL NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-logo-icon"><i class="fas fa-shield-halved"></i></div>
+        <div class="brand-text">
+          <span class="brand-name">PHISH<span>SHIELD</span></span>
+          <span class="brand-tagline">Think Before You Click</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="attacks.html" class="nav-link">Cyber Attacks</a></div>
+        <div class="nav-item"><a href="ethical-hacking.html" class="nav-link">Ethical Hacking</a></div>
+        
+        <div class="nav-item has-dropdown">
+          <a href="security.html" class="nav-link">Security <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+          <div class="mega-menu">
+            <a href="security.html#network" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-network-wired"></i></div>
+              <div><div class="mega-title">Network Security</div><div class="mega-desc">Firewalls, IDS/IPS, VPN, Diagrams</div></div>
+            </a>
+            <a href="security.html#banking" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-university"></i></div>
+              <div><div class="mega-title">Banking Security</div><div class="mega-desc">UPI fraud, QR scams, ATM skimming</div></div>
+            </a>
+            <a href="security.html#cloud" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-cloud-shield"></i></div>
+              <div><div class="mega-title">Cloud & AI Security</div><div class="mega-desc">AWS/Azure models & Deepfakes</div></div>
+            </a>
+            <a href="security.html#password" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-key"></i></div>
+              <div><div class="mega-title">Password Security</div><div class="mega-desc">Strength meter & generator</div></div>
+            </a>
+            <a href="security.html#email" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-envelope-open-text"></i></div>
+              <div><div class="mega-title">Email Security</div><div class="mega-desc">Header explorer, SPF/DKIM/DMARC</div></div>
+            </a>
+            <a href="security.html#browser" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-globe"></i></div>
+              <div><div class="mega-title">Browser Security</div><div class="mega-desc">HTTPS, SSL/TLS, Extensions</div></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item"><a href="labs.html" class="nav-link">Interactive Labs</a></div>
+        <div class="nav-item"><a href="tools.html" class="nav-link">Cyber Tools</a></div>
+        <div class="nav-item"><a href="roadmaps.html" class="nav-link">Roadmaps</a></div>
+        <div class="nav-item"><a href="quiz.html" class="nav-link">Quiz</a></div>
+        <div class="nav-item"><a href="glossary.html" class="nav-link">Glossary</a></div>
+        <div class="nav-item"><a href="resources.html" class="nav-link">Resources</a></div>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="user-xp-badge"><i class="fas fa-shield-alt"></i> Beginner</div>
+        <button class="action-btn search-trigger"><i class="fas fa-search"></i></button>
+        <button class="action-btn theme-toggle"><i class="fas fa-sun"></i></button>
+        <div class="mobile-toggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <section class="section container">
+      
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-envelope"></i> Get In Touch</span>
+        <h2 class="section-title">Contact & <span>Security FAQ</span></h2>
+        <p class="section-subtitle">Have questions or feedback? Connect with the PhishShield cybersecurity team or explore common questions.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap:2.5rem; margin-bottom:4rem;">
+        
+        <!-- CONTACT FORM -->
+        <div class="glass-card" style="padding:2rem;">
+          <h3 style="font-size:1.5rem; color:var(--text-primary); margin-bottom:1.5rem;"><i class="fas fa-paper-plane" style="color:var(--accent-cyan);"></i> Send Us a Message</h3>
+          
+          <form id="contact-form" onsubmit="event.preventDefault(); handleContactSubmit();">
+            <div style="margin-bottom:1.25rem;">
+              <label style="font-size:0.85rem; color:var(--text-muted); display:block; margin-bottom:0.4rem;">Your Full Name</label>
+              <input type="text" required placeholder="John Doe" style="width:100%; padding:0.85rem; background:rgba(0,0,0,0.3); border:1px solid var(--border-color); border-radius:var(--radius-sm); color:var(--text-primary);" />
+            </div>
+
+            <div style="margin-bottom:1.25rem;">
+              <label style="font-size:0.85rem; color:var(--text-muted); display:block; margin-bottom:0.4rem;">Your Email Address</label>
+              <input type="email" required placeholder="john@example.com" style="width:100%; padding:0.85rem; background:rgba(0,0,0,0.3); border:1px solid var(--border-color); border-radius:var(--radius-sm); color:var(--text-primary);" />
+            </div>
+
+            <div style="margin-bottom:1.25rem;">
+              <label style="font-size:0.85rem; color:var(--text-muted); display:block; margin-bottom:0.4rem;">Subject / Feedback Category</label>
+              <select style="width:100%; padding:0.85rem; background:var(--bg-tertiary); border:1px solid var(--border-color); border-radius:var(--radius-sm); color:var(--text-primary);">
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Lab Feedback">Interactive Lab Feedback</option>
+                <option value="Academic Project">Academic Major Project Demonstration</option>
+                <option value="Vulnerability Report">Security Vulnerability Report</option>
+              </select>
+            </div>
+
+            <div style="margin-bottom:1.5rem;">
+              <label style="font-size:0.85rem; color:var(--text-muted); display:block; margin-bottom:0.4rem;">Message</label>
+              <textarea rows="4" required placeholder="Type your message or inquiry here..." style="width:100%; padding:0.85rem; background:rgba(0,0,0,0.3); border:1px solid var(--border-color); border-radius:var(--radius-sm); color:var(--text-primary); font-family:inherit;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fas fa-paper-plane"></i> Submit Message (Client Simulation)</button>
+          </form>
+
+          <div id="contact-feedback" style="display:none; margin-top:1.5rem;" class="glass-card">
+            <div style="border-left:4px solid var(--success); padding:1rem;">
+              <h4 style="color:var(--success); margin-bottom:0.4rem;"><i class="fas fa-check-circle"></i> Message Received!</h4>
+              <p style="color:var(--text-secondary); font-size:0.9rem;">Thank you for contacting PhishShield. Your feedback has been logged in the client simulation engine.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ ACCORDION -->
+        <div>
+          <h3 style="font-size:1.5rem; color:var(--text-primary); margin-bottom:1.5rem;"><i class="fas fa-question-circle" style="color:var(--accent-purple);"></i> Frequently Asked Questions</h3>
+          
+          <div class="faq-item">
+            <div class="faq-question">What is PhishShield? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">PhishShield is a complete, static cybersecurity awareness and interactive learning web portal offering labs, quizzes, attack vector analysis, and career roadmaps.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Are the security labs scanning real external websites? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">No. All interactive labs, password checkers, and URL risk analyzers run locally in client-side JavaScript as educational heuristic simulations.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Is user progress saved between sessions? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Yes! User XP points, earned rank badges, dark/light theme preferences, and quiz history are saved directly in your browser's LocalStorage.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Can I use PhishShield for a B.Tech major project or portfolio? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Absolutely! PhishShield was engineered specifically to showcase professional cybersecurity knowledge, glassmorphism UI/UX design, and complex client-side application logic.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>Developed by Siva Sankar – PhishGuard Security Tool</p>
+        <p>For educational and cybersecurity awareness purposes only.</p>
+        <p>For any suggestions, contact: 9666241489</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleContactSubmit() {
+      const form = document.getElementById('contact-form');
+      const feedback = document.getElementById('contact-feedback');
+      form.style.display = 'none';
+      feedback.style.display = 'block';
+      if (typeof showToast === 'function') showToast("Message submitted successfully!", "success");
+    }
+
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

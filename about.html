@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About PhishShield | Cyber Security Awareness Portal</title>
+  <meta name="description" content="Learn about PhishShield's mission, vision, tech stack, key learning outcomes, and platform architecture for cybersecurity education." />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- GLOBAL NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-logo-icon"><i class="fas fa-shield-halved"></i></div>
+        <div class="brand-text">
+          <span class="brand-name">PHISH<span>SHIELD</span></span>
+          <span class="brand-tagline">Think Before You Click</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="attacks.html" class="nav-link">Cyber Attacks</a></div>
+        <div class="nav-item"><a href="ethical-hacking.html" class="nav-link">Ethical Hacking</a></div>
+        
+        <div class="nav-item has-dropdown">
+          <a href="security.html" class="nav-link">Security <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+          <div class="mega-menu">
+            <a href="security.html#network" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-network-wired"></i></div>
+              <div><div class="mega-title">Network Security</div><div class="mega-desc">Firewalls, IDS/IPS, VPN, Diagrams</div></div>
+            </a>
+            <a href="security.html#banking" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-university"></i></div>
+              <div><div class="mega-title">Banking Security</div><div class="mega-desc">UPI fraud, QR scams, ATM skimming</div></div>
+            </a>
+            <a href="security.html#cloud" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-cloud-shield"></i></div>
+              <div><div class="mega-title">Cloud & AI Security</div><div class="mega-desc">AWS/Azure models & Deepfakes</div></div>
+            </a>
+            <a href="security.html#password" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-key"></i></div>
+              <div><div class="mega-title">Password Security</div><div class="mega-desc">Strength meter & generator</div></div>
+            </a>
+            <a href="security.html#email" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-envelope-open-text"></i></div>
+              <div><div class="mega-title">Email Security</div><div class="mega-desc">Header explorer, SPF/DKIM/DMARC</div></div>
+            </a>
+            <a href="security.html#browser" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-globe"></i></div>
+              <div><div class="mega-title">Browser Security</div><div class="mega-desc">HTTPS, SSL/TLS, Extensions</div></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item"><a href="labs.html" class="nav-link">Interactive Labs</a></div>
+        <div class="nav-item"><a href="tools.html" class="nav-link">Cyber Tools</a></div>
+        <div class="nav-item"><a href="roadmaps.html" class="nav-link">Roadmaps</a></div>
+        <div class="nav-item"><a href="quiz.html" class="nav-link">Quiz</a></div>
+        <div class="nav-item"><a href="glossary.html" class="nav-link">Glossary</a></div>
+        <div class="nav-item"><a href="resources.html" class="nav-link">Resources</a></div>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="user-xp-badge"><i class="fas fa-shield-alt"></i> Beginner</div>
+        <button class="action-btn search-trigger"><i class="fas fa-search"></i></button>
+        <button class="action-btn theme-toggle"><i class="fas fa-sun"></i></button>
+        <div class="mobile-toggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <section class="section container">
+      
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-info-circle"></i> About Platform</span>
+        <h2 class="section-title">About <span>PhishShield</span></h2>
+        <p class="section-subtitle">Building an educated, cyber-resilient world through interactive practical security simulations.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:2rem; margin-bottom:3rem;">
+        <div class="glass-card" style="border-left:4px solid var(--accent-cyan);">
+          <h3 style="font-size:1.5rem; color:var(--text-primary); margin-bottom:0.75rem;"><i class="fas fa-bullseye" style="color:var(--accent-cyan);"></i> Mission</h3>
+          <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.6;">
+            Our mission is to democratize cybersecurity awareness by bridging the gap between theoretical knowledge and practical threat detection. We empower users to spot social engineering, phishing, and malware threats before damage occurs.
+          </p>
+        </div>
+
+        <div class="glass-card" style="border-left:4px solid var(--accent-purple);">
+          <h3 style="font-size:1.5rem; color:var(--text-primary); margin-bottom:0.75rem;"><i class="fas fa-eye" style="color:var(--accent-purple);"></i> Vision</h3>
+          <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.6;">
+            To become the benchmark open cybersecurity educational portal for students, major academic projects, corporate security awareness training, and aspiring SOC analysts worldwide.
+          </p>
+        </div>
+      </div>
+
+      <!-- TECH STACK & ARCHITECTURE -->
+      <div class="glass-card" style="margin-bottom:3rem; padding:2rem;">
+        <h3 style="font-size:1.6rem; color:var(--text-primary); margin-bottom:1.25rem;"><i class="fas fa-code"></i> Technology Stack</h3>
+        
+        <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:1.5rem; text-align:center;">
+          <div class="glass-card" style="padding:1rem;">
+            <i class="fab fa-html5" style="font-size:2.5rem; color:#e34f26; margin-bottom:0.5rem;"></i>
+            <h4 style="font-size:1.1rem; color:var(--text-primary);">HTML5</h4>
+            <p style="font-size:0.8rem; color:var(--text-muted);">Semantic Markup & SEO</p>
+          </div>
+
+          <div class="glass-card" style="padding:1rem;">
+            <i class="fab fa-css3-alt" style="font-size:2.5rem; color:#1572b6; margin-bottom:0.5rem;"></i>
+            <h4 style="font-size:1.1rem; color:var(--text-primary);">CSS3</h4>
+            <p style="font-size:0.8rem; color:var(--text-muted);">Vanilla Glassmorphism & Cyber Grid</p>
+          </div>
+
+          <div class="glass-card" style="padding:1rem;">
+            <i class="fab fa-js" style="font-size:2.5rem; color:#f7df1e; margin-bottom:0.5rem;"></i>
+            <h4 style="font-size:1.1rem; color:var(--text-primary);">Vanilla JavaScript</h4>
+            <p style="font-size:0.8rem; color:var(--text-muted);">Interactive Simulators & Quizzes</p>
+          </div>
+
+          <div class="glass-card" style="padding:1rem;">
+            <i class="fas fa-database" style="font-size:2.5rem; color:var(--accent-purple); margin-bottom:0.5rem;"></i>
+            <h4 style="font-size:1.1rem; color:var(--text-primary);">LocalStorage</h4>
+            <p style="font-size:0.8rem; color:var(--text-muted);">Client-Side Progress & XP Engine</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>Developed by Siva Sankar – PhishGuard Security Tool</p>
+        <p>For educational and cybersecurity awareness purposes only.</p>
+        <p>For any suggestions, contact: 9666241489</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

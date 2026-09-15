@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhishShield | Cyber Security Awareness & Learning Portal</title>
+  <meta name="description" content="PhishShield - Defend Your Digital World. Learn cyber attack prevention, practice interactive security labs, take quizzes, explore career roadmaps and cyber tools." />
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- GLOBAL NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-logo-icon"><i class="fas fa-shield-halved"></i></div>
+        <div class="brand-text">
+          <span class="brand-name">PHISH<span>SHIELD</span></span>
+          <span class="brand-tagline">Think Before You Click</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <div class="nav-item"><a href="index.html" class="nav-link active">Home</a></div>
+        <div class="nav-item"><a href="attacks.html" class="nav-link">Cyber Attacks</a></div>
+        <div class="nav-item"><a href="ethical-hacking.html" class="nav-link">Ethical Hacking</a></div>
+        
+        <!-- MEGA MENU FOR SECURITY -->
+        <div class="nav-item has-dropdown">
+          <a href="security.html" class="nav-link">Security <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+          <div class="mega-menu">
+            <a href="security.html#network" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-network-wired"></i></div>
+              <div><div class="mega-title">Network Security</div><div class="mega-desc">Firewalls, IDS/IPS, VPN, Diagrams</div></div>
+            </a>
+            <a href="security.html#banking" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-university"></i></div>
+              <div><div class="mega-title">Banking Security</div><div class="mega-desc">UPI fraud, QR scams, ATM skimming</div></div>
+            </a>
+            <a href="security.html#cloud" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-cloud-shield"></i></div>
+              <div><div class="mega-title">Cloud & AI Security</div><div class="mega-desc">AWS/Azure models & Deepfakes</div></div>
+            </a>
+            <a href="security.html#password" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-key"></i></div>
+              <div><div class="mega-title">Password Security</div><div class="mega-desc">Strength meter & generator</div></div>
+            </a>
+            <a href="security.html#email" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-envelope-open-text"></i></div>
+              <div><div class="mega-title">Email Security</div><div class="mega-desc">Header explorer, SPF/DKIM/DMARC</div></div>
+            </a>
+            <a href="security.html#browser" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-globe"></i></div>
+              <div><div class="mega-title">Browser Security</div><div class="mega-desc">HTTPS, SSL/TLS, Extensions</div></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item"><a href="labs.html" class="nav-link">Interactive Labs</a></div>
+        <div class="nav-item"><a href="tools.html" class="nav-link">Cyber Tools</a></div>
+        <div class="nav-item"><a href="roadmaps.html" class="nav-link">Roadmaps</a></div>
+        <div class="nav-item"><a href="quiz.html" class="nav-link">Quiz</a></div>
+        <div class="nav-item"><a href="glossary.html" class="nav-link">Glossary</a></div>
+        <div class="nav-item"><a href="resources.html" class="nav-link">Resources</a></div>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="user-xp-badge" title="Your Local XP Rank"><i class="fas fa-shield-alt"></i> Beginner</div>
+        <button class="action-btn search-trigger" title="Search Portal (Ctrl+K)"><i class="fas fa-search"></i></button>
+        <button class="action-btn theme-toggle" title="Toggle Light/Dark Theme"><i class="fas fa-sun"></i></button>
+        <div class="mobile-toggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="section cyber-grid-bg hero-section" style="padding:4rem 0 6rem 0;">
+      <div class="container">
+        <div class="hero-grid" style="display:grid; grid-template-columns: 1.2fr 0.8fr; gap:3rem; align-items:center;">
+          <div>
+            <span class="section-badge"><i class="fas fa-shield-cat"></i> Next-Gen Cybersecurity Learning</span>
+            <h1 style="font-size:3.5rem; font-weight:800; line-height:1.15; margin-bottom:1.25rem;">
+              Defend Your Digital World.<br />
+              <span style="background:linear-gradient(135deg, var(--accent-cyan), var(--accent-purple)); -webkit-background-clip:text; -webkit-text-fill-color:transparent;" class="typing-text">Learn. Detect. Prevent.</span>
+            </h1>
+            <p style="font-size:1.2rem; color:var(--text-secondary); margin-bottom:2rem; max-width:600px;">
+              Master real-world cyber attack vectors, practice in 6 hands-on interactive labs, analyze live threats, test your skills, and build your cybersecurity career roadmap.
+            </p>
+            <div class="hero-actions" style="display:flex; gap:1rem; flex-wrap:wrap;">
+              <a href="labs.html" class="btn btn-primary btn-lg"><i class="fas fa-flask"></i> Explore Interactive Labs</a>
+              <a href="attacks.html" class="btn btn-secondary btn-lg"><i class="fas fa-bug"></i> Cyber Attacks Library</a>
+              <a href="quiz.html" class="btn btn-outline btn-lg"><i class="fas fa-question-circle"></i> Take Quiz</a>
+            </div>
+          </div>
+
+          <!-- ANIMATED SHIELD RADAR GRAPHIC -->
+          <div style="display:flex; justify-content:center; align-items:center; position:relative;">
+            <div class="animated-shield glass-card" style="width:280px; height:340px; display:flex; flex-direction:column; align-items:center; justify-content:center; border-radius:var(--radius-lg); text-align:center; position:relative; z-index:2;">
+              <div class="radar-sweep-container" style="margin-bottom:1.5rem;">
+                <div class="radar-sweep-line"></div>
+                <i class="fas fa-user-shield" style="font-size:4rem; color:var(--accent-cyan); position:relative; z-index:5;"></i>
+              </div>
+              <h3 style="font-weight:700; color:var(--text-primary); font-size:1.3rem;">PHISHSHIELD SOC</h3>
+              <p style="font-size:0.85rem; color:var(--success);"><span class="live-pulse"></span> SYSTEM MONITORED & SECURE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DAILY TIP & CHALLENGE GAMIFICATION BANNER -->
+    <section class="container" style="margin-bottom:4rem;">
+      <div class="glass-card glow-border" style="display:flex; align-items:center; justify-content:space-between; gap:2rem; padding:1.5rem 2rem; border-left:4px solid var(--accent-cyan);">
+        <div style="display:flex; align-items:center; gap:1.25rem;">
+          <div style="width:48px; height:48px; border-radius:50%; background:rgba(0,240,255,0.15); display:flex; align-items:center; justify-content:center; color:var(--accent-cyan); font-size:1.4rem; flex-shrink:0;">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <div>
+            <span style="font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; color:var(--accent-cyan); font-weight:700;">Daily Cybersecurity Tip</span>
+            <p class="daily-tip-text" style="color:var(--text-primary); font-weight:500; font-size:1.05rem; margin-top:0.15rem;">Loading daily security tip...</p>
+          </div>
+        </div>
+        <a href="quiz.html" class="btn btn-secondary btn-sm" style="flex-shrink:0;"><i class="fas fa-trophy"></i> Daily Challenge (+50 XP)</a>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION SECTION -->
+    <section class="section container">
+      <div class="section-header">
+        <span class="section-badge">Platform Overview</span>
+        <h2 class="section-title">What is <span>PhishShield</span>?</h2>
+        <p class="section-subtitle">A comprehensive, interactive cyber security awareness and technical training portal designed to transform digital users into defensive security champions.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:2rem;">
+        <div class="glass-card">
+          <div style="width:44px; height:44px; border-radius:var(--radius-sm); background:rgba(0,240,255,0.1); color:var(--accent-cyan); display:flex; align-items:center; justify-content:center; font-size:1.2rem; margin-bottom:1rem;">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3 style="font-size:1.3rem; margin-bottom:0.5rem;">For Students & Beginners</h3>
+          <p style="color:var(--text-secondary); font-size:0.92rem;">Learn foundational cybersecurity concepts, terminology, network protocols, and ethical hacking methodologies from scratch.</p>
+        </div>
+
+        <div class="glass-card">
+          <div style="width:44px; height:44px; border-radius:var(--radius-sm); background:rgba(139,92,246,0.1); color:var(--accent-purple); display:flex; align-items:center; justify-content:center; font-size:1.2rem; margin-bottom:1rem;">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <h3 style="font-size:1.3rem; margin-bottom:0.5rem;">For Employees & Businesses</h3>
+          <p style="color:var(--text-secondary); font-size:0.92rem;">Train staff to detect phishing emails, smishing scams, malicious attachments, and social engineering tricks before breaches occur.</p>
+        </div>
+
+        <div class="glass-card">
+          <div style="width:44px; height:44px; border-radius:var(--radius-sm); background:rgba(59,130,246,0.1); color:var(--accent-blue); display:flex; align-items:center; justify-content:center; font-size:1.2rem; margin-bottom:1rem;">
+            <i class="fas fa-user-ninja"></i>
+          </div>
+          <h3 style="font-size:1.3rem; margin-bottom:0.5rem;">For Aspiring Cyber Professionals</h3>
+          <p style="color:var(--text-secondary); font-size:0.92rem;">Explore 8 interactive career roadmaps, master 11+ industry tools like Wireshark & Splunk, and test your knowledge with 50+ quiz questions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REAL-TIME CYBER THREAT STATISTICS COUNTERS -->
+    <section class="section cyber-grid-bg" style="background:var(--bg-secondary); border-y:1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Global Threat Landscape</span>
+          <h2 class="section-title">Cybersecurity <span>By The Numbers</span></h2>
+        </div>
+
+        <div class="stats-grid" style="display:grid; grid-template-columns: repeat(4, 1fr); gap:1.5rem;">
+          <div class="glass-card" style="text-align:center;">
+            <h3 style="font-size:2.8rem; font-weight:800; color:var(--accent-cyan); font-family:var(--font-mono); margin-bottom:0.25rem;">2.2K+</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; font-weight:500;">Daily Cyber Attacks</p>
+          </div>
+
+          <div class="glass-card" style="text-align:center;">
+            <h3 style="font-size:2.8rem; font-weight:800; color:var(--danger); font-family:var(--font-mono); margin-bottom:0.25rem;">3.4B</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; font-weight:500;">Daily Phishing Emails</p>
+          </div>
+
+          <div class="glass-card" style="text-align:center;">
+            <h3 style="font-size:2.8rem; font-weight:800; color:var(--warning); font-family:var(--font-mono); margin-bottom:0.25rem;">$10.5T</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; font-weight:500;">Annual Loss by 2025</p>
+          </div>
+
+          <div class="glass-card" style="text-align:center;">
+            <h3 style="font-size:2.8rem; font-weight:800; color:var(--accent-purple); font-family:var(--font-mono); margin-bottom:0.25rem;">91%</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; font-weight:500;">Breaches Start via Phishing</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED MODULES GRID -->
+    <section class="section container">
+      <div class="section-header">
+        <span class="section-badge">Explore Platform Modules</span>
+        <h2 class="section-title">Master <span>Cyber Defense</span></h2>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:2rem;">
+        <a href="attacks.html" class="glass-card" style="text-decoration:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <i class="fas fa-biohazard" style="font-size:2rem; color:var(--danger);"></i>
+            <span class="tag tag-critical">15+ Vectors</span>
+          </div>
+          <h3 style="font-size:1.4rem; color:var(--text-primary); margin-bottom:0.5rem;">Cyber Attacks Library</h3>
+          <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.5rem;">Deep dive into Phishing, Ransomware, SQL Injection, XSS, Zero-Days, and MITM attacks with flowcharts.</p>
+          <span style="color:var(--accent-cyan); font-weight:600; font-size:0.9rem;">Explore Library <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="labs.html" class="glass-card" style="text-decoration:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <i class="fas fa-flask" style="font-size:2rem; color:var(--accent-cyan);"></i>
+            <span class="tag tag-medium">6 Simulators</span>
+          </div>
+          <h3 style="font-size:1.4rem; color:var(--text-primary); margin-bottom:0.5rem;">Interactive Security Labs</h3>
+          <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.5rem;">Hands-on practice inspecting Fake Emails, SMS Scams, Web Phishing, QR Codes, and Heuristic URL risks.</p>
+          <span style="color:var(--accent-cyan); font-weight:600; font-size:0.9rem;">Launch Labs <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="security.html" class="glass-card" style="text-decoration:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <i class="fas fa-shield-alt" style="font-size:2rem; color:var(--accent-purple);"></i>
+            <span class="tag tag-low">6 Hubs</span>
+          </div>
+          <h3 style="font-size:1.4rem; color:var(--text-primary); margin-bottom:0.5rem;">Security Hub & Tools</h3>
+          <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.5rem;">Interactive Network Diagrams, Password Strength Meter & Generator, Email Header Explorer, Banking checklist.</p>
+          <span style="color:var(--accent-cyan); font-weight:600; font-size:0.9rem;">Open Hub <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="ethical-hacking.html" class="glass-card" style="text-decoration:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <i class="fas fa-user-ninja" style="font-size:2rem; color:var(--accent-blue);"></i>
+            <span class="tag tag-medium">Methodology</span>
+          </div>
+          <h3 style="font-size:1.4rem; color:var(--text-primary); margin-bottom:0.5rem;">Ethical Hacking</h3>
+          <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.5rem;">Interactive 6-step penetration testing timeline, Hacker types (White/Black/Grey), Bug Bounty guide.</p>
+          <span style="color:var(--accent-cyan); font-weight:600; font-size:0.9rem;">Learn Hacking <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="roadmaps.html" class="glass-card" style="text-decoration:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <i class="fas fa-route" style="font-size:2rem; color:var(--warning);"></i>
+            <span class="tag tag-medium">8 Pathways</span>
+          </div>
+          <h3 style="font-size:1.4rem; color:var(--text-primary); margin-bottom:0.5rem;">Career Roadmaps</h3>
+          <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.5rem;">Visual step-by-step career pathways for SOC Analysts, Ethical Hackers, Pen Testers, DFIR, and DevSecOps.</p>
+          <span style="color:var(--accent-cyan); font-weight:600; font-size:0.9rem;">View Pathways <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="quiz.html" class="glass-card" style="text-decoration:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <i class="fas fa-trophy" style="font-size:2rem; color:var(--success);"></i>
+            <span class="tag tag-low">50+ Questions</span>
+          </div>
+          <h3 style="font-size:1.4rem; color:var(--text-primary); margin-bottom:0.5rem;">Cyber Security Quiz</h3>
+          <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.5rem;">Test your security awareness, track high scores, unlock collectible badges, and rank up your user XP.</p>
+          <span style="color:var(--accent-cyan); font-weight:600; font-size:0.9rem;">Start Quiz <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- LATEST CYBER NEWS -->
+    <section class="section container">
+      <div class="section-header">
+        <span class="section-badge">Threat Intelligence</span>
+        <h2 class="section-title">Latest <span>Cyber Threat News</span></h2>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:2rem;">
+        <div class="glass-card">
+          <span class="tag tag-critical" style="margin-bottom:0.75rem;">AI Scams</span>
+          <h3 style="font-size:1.2rem; color:var(--text-primary); margin-bottom:0.5rem;">Deepfake Voice Cloning Used in Corporate Financial Theft</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom:1rem;">Cybercriminals leverage AI audio synthesis to impersonate CEOs over phone calls, requesting urgent wire transfers.</p>
+          <span style="font-size:0.78rem; color:var(--text-muted);"><i class="far fa-clock"></i> Updated Educational Threat Brief</span>
+        </div>
+
+        <div class="glass-card">
+          <span class="tag tag-high" style="margin-bottom:0.75rem;">Mobile Fraud</span>
+          <h3 style="font-size:1.2rem; color:var(--text-primary); margin-bottom:0.5rem;">Surge in QR Code 'Quishing' Scams at Public Parking Meters</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom:1rem;">Attackers overlay malicious QR stickers over legitimate payment meters to steal credit card details.</p>
+          <span style="font-size:0.78rem; color:var(--text-muted);"><i class="far fa-clock"></i> Updated Educational Threat Brief</span>
+        </div>
+
+        <div class="glass-card">
+          <span class="tag tag-critical" style="margin-bottom:0.75rem;">Ransomware</span>
+          <h3 style="font-size:1.2rem; color:var(--text-primary); margin-bottom:0.5rem;">Double Extortion Ransomware Exploiting Unpatched Cloud VPNs</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom:1rem;">Threat groups exfiltrate sensitive corporate data before initiating mass file encryption on cloud subnets.</p>
+          <span style="font-size:0.78rem; color:var(--text-muted);"><i class="far fa-clock"></i> Updated Educational Threat Brief</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section cyber-grid-bg" style="background:var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">User Feedback</span>
+          <h2 class="section-title">Trusted By <span>Learners & SOC Analysts</span></h2>
+        </div>
+
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:2rem;">
+          <div class="glass-card">
+            <p style="color:var(--text-secondary); font-style:italic; margin-bottom:1.5rem;">"PhishShield's interactive labs helped me spot fake email headers and phishing URLs immediately during my SOC analyst interview!"</p>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <div style="width:40px; height:40px; border-radius:50%; background:var(--accent-cyan); color:#000; display:flex; align-items:center; justify-content:center; font-weight:700;">AK</div>
+              <div><h4 style="font-size:0.95rem; color:var(--text-primary);">Alex Kumar</h4><p style="font-size:0.78rem; color:var(--text-muted);">Tier 1 SOC Analyst</p></div>
+            </div>
+          </div>
+
+          <div class="glass-card">
+            <p style="color:var(--text-secondary); font-style:italic; margin-bottom:1.5rem;">"The Password Strength Checker and Email Header Inspector are incredible visual teaching tools for cybersecurity majors."</p>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <div style="width:40px; height:40px; border-radius:50%; background:var(--accent-purple); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700;">SP</div>
+              <div><h4 style="font-size:0.95rem; color:var(--text-primary);">Dr. Sarah Patel</h4><p style="font-size:0.78rem; color:var(--text-muted);">Cybersecurity Educator</p></div>
+            </div>
+          </div>
+
+          <div class="glass-card">
+            <p style="color:var(--text-secondary); font-style:italic; margin-bottom:1.5rem;">"The 50-question quiz and badge achievement system made learning ethical hacking and network security super fun."</p>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <div style="width:40px; height:40px; border-radius:50%; background:var(--accent-blue); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700;">RM</div>
+              <div><h4 style="font-size:0.95rem; color:var(--text-primary);">Rohan Mehta</h4><p style="font-size:0.78rem; color:var(--text-muted);">Computer Science Student</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section container" style="text-align:center;">
+      <div class="glass-card glow-border" style="padding:4rem 2rem; background:linear-gradient(135deg, rgba(0,240,255,0.05), rgba(139,92,246,0.05));">
+        <h2 style="font-size:2.8rem; font-weight:800; color:var(--text-primary); margin-bottom:1rem;">Your Security Starts With Awareness.</h2>
+        <p style="color:var(--text-secondary); font-size:1.15rem; max-width:600px; margin:0 auto 2rem auto;">Join thousands of students and professionals sharpening their digital defense skills today.</p>
+        <a href="labs.html" class="btn btn-primary btn-lg"><i class="fas fa-shield-alt"></i> Start Learning Now</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-name">PHISH<span>SHIELD</span></a>
+          <p>Complete Cyber Security Awareness & Interactive Learning Portal. Defending your digital world through education and practical simulations.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-icon"><i class="fab fa-github"></i></a>
+            <a href="#" class="footer-social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="footer-social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="footer-social-icon"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Core Modules</h4>
+          <div class="footer-links">
+            <a href="attacks.html">Cyber Attacks</a>
+            <a href="ethical-hacking.html">Ethical Hacking</a>
+            <a href="security.html">Security Hub</a>
+            <a href="labs.html">Interactive Labs</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Career & Tools</h4>
+          <div class="footer-links">
+            <a href="tools.html">Cyber Security Tools</a>
+            <a href="roadmaps.html">Career Roadmaps</a>
+            <a href="quiz.html">Take Quiz</a>
+            <a href="glossary.html">Cyber Glossary</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Platform</h4>
+          <div class="footer-links">
+            <a href="resources.html">Resources</a>
+            <a href="about.html">About PhishShield</a>
+            <a href="contact.html">Contact & FAQ</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Developed by Siva Sankar – PhishGuard Security Tool</p>
+        <p>For educational and cybersecurity awareness purposes only.</p>
+        <p>For any suggestions, contact: 9666241489</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

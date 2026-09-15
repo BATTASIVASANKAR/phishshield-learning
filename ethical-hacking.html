@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethical Hacking | PhishShield</title>
+  <meta name="description" content="Learn ethical hacking concepts, hacker classification (White/Black/Grey Hat), interactive penetration testing timeline, bug bounty programs, and defensive security methodology." />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- GLOBAL NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-logo-icon"><i class="fas fa-shield-halved"></i></div>
+        <div class="brand-text">
+          <span class="brand-name">PHISH<span>SHIELD</span></span>
+          <span class="brand-tagline">Think Before You Click</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="attacks.html" class="nav-link">Cyber Attacks</a></div>
+        <div class="nav-item"><a href="ethical-hacking.html" class="nav-link active">Ethical Hacking</a></div>
+        
+        <div class="nav-item has-dropdown">
+          <a href="security.html" class="nav-link">Security <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+          <div class="mega-menu">
+            <a href="security.html#network" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-network-wired"></i></div>
+              <div><div class="mega-title">Network Security</div><div class="mega-desc">Firewalls, IDS/IPS, VPN, Diagrams</div></div>
+            </a>
+            <a href="security.html#banking" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-university"></i></div>
+              <div><div class="mega-title">Banking Security</div><div class="mega-desc">UPI fraud, QR scams, ATM skimming</div></div>
+            </a>
+            <a href="security.html#cloud" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-cloud-shield"></i></div>
+              <div><div class="mega-title">Cloud & AI Security</div><div class="mega-desc">AWS/Azure models & Deepfakes</div></div>
+            </a>
+            <a href="security.html#password" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-key"></i></div>
+              <div><div class="mega-title">Password Security</div><div class="mega-desc">Strength meter & generator</div></div>
+            </a>
+            <a href="security.html#email" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-envelope-open-text"></i></div>
+              <div><div class="mega-title">Email Security</div><div class="mega-desc">Header explorer, SPF/DKIM/DMARC</div></div>
+            </a>
+            <a href="security.html#browser" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-globe"></i></div>
+              <div><div class="mega-title">Browser Security</div><div class="mega-desc">HTTPS, SSL/TLS, Extensions</div></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item"><a href="labs.html" class="nav-link">Interactive Labs</a></div>
+        <div class="nav-item"><a href="tools.html" class="nav-link">Cyber Tools</a></div>
+        <div class="nav-item"><a href="roadmaps.html" class="nav-link">Roadmaps</a></div>
+        <div class="nav-item"><a href="quiz.html" class="nav-link">Quiz</a></div>
+        <div class="nav-item"><a href="glossary.html" class="nav-link">Glossary</a></div>
+        <div class="nav-item"><a href="resources.html" class="nav-link">Resources</a></div>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="user-xp-badge"><i class="fas fa-shield-alt"></i> Beginner</div>
+        <button class="action-btn search-trigger"><i class="fas fa-search"></i></button>
+        <button class="action-btn theme-toggle"><i class="fas fa-sun"></i></button>
+        <div class="mobile-toggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    
+    <!-- HEADER -->
+    <section class="section container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-user-ninja"></i> Defensive Offensive Security</span>
+        <h2 class="section-title">Ethical Hacking <span>& Methodology</span></h2>
+        <p class="section-subtitle">Understanding authorized offensive testing to build impenetrable defensive security postures.</p>
+      </div>
+
+      <!-- WHAT IS ETHICAL HACKING -->
+      <div class="glass-card" style="margin-bottom:3rem; padding:2rem; border-left:4px solid var(--accent-cyan);">
+        <h3 style="font-size:1.6rem; color:var(--text-primary); margin-bottom:1rem;">What is Ethical Hacking?</h3>
+        <p style="color:var(--text-secondary); font-size:1.05rem; line-height:1.7;">
+          Ethical Hacking (also known as Penetration Testing or White Hat Hacking) involves authorized attempts to gain unauthorized access to a computer system, application, or data. Unlike malicious hackers, ethical hackers operate under strict legal authorization and scope to discover vulnerabilities before threat actors can exploit them.
+        </p>
+      </div>
+
+      <!-- TYPES OF HACKERS -->
+      <div style="margin-bottom:4rem;">
+        <h3 style="font-size:1.8rem; color:var(--text-primary); margin-bottom:1.5rem; text-align:center;">The Hacker Matrix: White, Black & Grey Hats</h3>
+        
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:2rem;">
+          <div class="glass-card" style="border-top:3px solid var(--success);">
+            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
+              <i class="fas fa-hat-wizard" style="font-size:2rem; color:var(--success);"></i>
+              <h4 style="font-size:1.4rem; color:var(--text-primary);">White Hat</h4>
+            </div>
+            <span class="tag tag-low" style="margin-bottom:1rem;">Ethical & Legal</span>
+            <p style="color:var(--text-secondary); font-size:0.92rem; margin-top:0.75rem;">Authorized security professionals employed by companies to find and report vulnerabilities responsibly. Operate strictly within scope contracts.</p>
+          </div>
+
+          <div class="glass-card" style="border-top:3px solid var(--danger);">
+            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
+              <i class="fas fa-user-secret" style="font-size:2rem; color:var(--danger);"></i>
+              <h4 style="font-size:1.4rem; color:var(--text-primary);">Black Hat</h4>
+            </div>
+            <span class="tag tag-critical" style="margin-bottom:1rem;">Malicious & Illegal</span>
+            <p style="color:var(--text-secondary); font-size:0.92rem; margin-top:0.75rem;">Cybercriminals who breach systems without permission to steal sensitive data, deploy ransomware, or profit financially.</p>
+          </div>
+
+          <div class="glass-card" style="border-top:3px solid var(--warning);">
+            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
+              <i class="fas fa-mask" style="font-size:2rem; color:var(--warning);"></i>
+              <h4 style="font-size:1.4rem; color:var(--text-primary);">Grey Hat</h4>
+            </div>
+            <span class="tag tag-high" style="margin-bottom:1rem;">Uncertain Authorization</span>
+            <p style="color:var(--text-secondary); font-size:0.92rem; margin-top:0.75rem;">Security researchers who probe systems without prior permission, but without malicious intent. They report bugs, sometimes demanding rewards.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE METHODOLOGY TIMELINE -->
+      <div style="margin-bottom:4rem;">
+        <div class="section-header">
+          <span class="section-badge">6-Phase Process</span>
+          <h2 class="section-title">Penetration Testing <span>Methodology</span></h2>
+          <p class="section-subtitle">Click any step in the timeline below to inspect the key tools and deliverables generated during each phase.</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1.2fr; gap:2rem; align-items:start;">
+          <div id="methodology-timeline" style="display:flex; flex-direction:column; gap:1rem;">
+            <!-- Rendered by js/ethical-hacking.js -->
+          </div>
+
+          <div id="methodology-detail">
+            <!-- Dynamic Detail Box -->
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPARISON TABLE -->
+      <div class="glass-card" style="padding:2rem;">
+        <h3 style="font-size:1.6rem; color:var(--text-primary); margin-bottom:1.5rem;"><i class="fas fa-balance-scale"></i> Ethical vs Malicious Hacking Comparison</h3>
+        
+        <div style="overflow-x:auto;">
+          <table style="width:100%; border-collapse:collapse; text-align:left;">
+            <thead>
+              <tr style="border-bottom:2px solid var(--border-cyan); color:var(--accent-cyan);">
+                <th style="padding:1rem;">Feature / Aspect</th>
+                <th style="padding:1rem; color:var(--success);">Ethical Hacking (White Hat)</th>
+                <th style="padding:1rem; color:var(--danger);">Malicious Hacking (Black Hat)</th>
+              </tr>
+            </thead>
+            <tbody style="font-size:0.92rem; color:var(--text-secondary);">
+              <tr style="border-bottom:1px solid var(--border-color);">
+                <td style="padding:1rem; font-weight:700; color:var(--text-primary);">Legal Authorization</td>
+                <td style="padding:1rem; color:var(--success);">Explicit written permission & NDA contracts</td>
+                <td style="padding:1rem; color:var(--danger);">No authorization (Illegal intrusion)</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border-color);">
+                <td style="padding:1rem; font-weight:700; color:var(--text-primary);">Primary Motivation</td>
+                <td style="padding:1rem;">Improve system defense & protect data</td>
+                <td style="padding:1rem;">Financial gain, extortion, data theft</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border-color);">
+                <td style="padding:1rem; font-weight:700; color:var(--text-primary);">Disclosure Policy</td>
+                <td style="padding:1rem;">Responsible disclosure to vendor</td>
+                <td style="padding:1rem;">Public dump or sale on Dark Web markets</td>
+              </tr>
+              <tr>
+                <td style="padding:1rem; font-weight:700; color:var(--text-primary);">Documentation</td>
+                <td style="padding:1rem;">Comprehensive remediation reports</td>
+                <td style="padding:1rem;">Ransom demand notes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>Developed by Siva Sankar – PhishGuard Security Tool</p>
+        <p>For educational and cybersecurity awareness purposes only.</p>
+        <p>For any suggestions, contact: 9666241489</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/ethical-hacking.js"></script>
+</body>
+</html>

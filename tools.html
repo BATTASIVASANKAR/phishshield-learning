@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyber Security Tools Library | PhishShield</title>
+  <meta name="description" content="Explore PhishShield's cyber tools library. Detailed overview for Wireshark, Nmap, Burp Suite, Metasploit, Kali Linux, Splunk, Microsoft Sentinel, Nessus, OpenVAS, Snort, and Suricata." />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  
+  <style>
+    .tool-filter-btn {
+      padding: 0.5rem 1.25rem;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: all var(--transition-fast);
+    }
+    .tool-filter-btn:hover, .tool-filter-btn.active {
+      background: rgba(0, 240, 255, 0.15);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+    .tool-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- GLOBAL NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-logo-icon"><i class="fas fa-shield-halved"></i></div>
+        <div class="brand-text">
+          <span class="brand-name">PHISH<span>SHIELD</span></span>
+          <span class="brand-tagline">Think Before You Click</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="attacks.html" class="nav-link">Cyber Attacks</a></div>
+        <div class="nav-item"><a href="ethical-hacking.html" class="nav-link">Ethical Hacking</a></div>
+        
+        <div class="nav-item has-dropdown">
+          <a href="security.html" class="nav-link">Security <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+          <div class="mega-menu">
+            <a href="security.html#network" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-network-wired"></i></div>
+              <div><div class="mega-title">Network Security</div><div class="mega-desc">Firewalls, IDS/IPS, VPN, Diagrams</div></div>
+            </a>
+            <a href="security.html#banking" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-university"></i></div>
+              <div><div class="mega-title">Banking Security</div><div class="mega-desc">UPI fraud, QR scams, ATM skimming</div></div>
+            </a>
+            <a href="security.html#cloud" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-cloud-shield"></i></div>
+              <div><div class="mega-title">Cloud & AI Security</div><div class="mega-desc">AWS/Azure models & Deepfakes</div></div>
+            </a>
+            <a href="security.html#password" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-key"></i></div>
+              <div><div class="mega-title">Password Security</div><div class="mega-desc">Strength meter & generator</div></div>
+            </a>
+            <a href="security.html#email" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-envelope-open-text"></i></div>
+              <div><div class="mega-title">Email Security</div><div class="mega-desc">Header explorer, SPF/DKIM/DMARC</div></div>
+            </a>
+            <a href="security.html#browser" class="mega-item">
+              <div class="mega-icon"><i class="fas fa-globe"></i></div>
+              <div><div class="mega-title">Browser Security</div><div class="mega-desc">HTTPS, SSL/TLS, Extensions</div></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item"><a href="labs.html" class="nav-link">Interactive Labs</a></div>
+        <div class="nav-item"><a href="tools.html" class="nav-link active">Cyber Tools</a></div>
+        <div class="nav-item"><a href="roadmaps.html" class="nav-link">Roadmaps</a></div>
+        <div class="nav-item"><a href="quiz.html" class="nav-link">Quiz</a></div>
+        <div class="nav-item"><a href="glossary.html" class="nav-link">Glossary</a></div>
+        <div class="nav-item"><a href="resources.html" class="nav-link">Resources</a></div>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="user-xp-badge"><i class="fas fa-shield-alt"></i> Beginner</div>
+        <button class="action-btn search-trigger"><i class="fas fa-search"></i></button>
+        <button class="action-btn theme-toggle"><i class="fas fa-sun"></i></button>
+        <div class="mobile-toggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <section class="section container">
+      
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-tools"></i> Industry Arsenal</span>
+        <h2 class="section-title">Cyber Security <span>Tools Library</span></h2>
+        <p class="section-subtitle">Discover industry-standard offensive and defensive security software utilized in modern SOCs, penetration tests, and vulnerability audits.</p>
+      </div>
+
+      <!-- SEARCH & FILTER BAR -->
+      <div class="glass-card" style="margin-bottom:3rem; padding:1.5rem;">
+        <div style="display:flex; flex-direction:column; gap:1.25rem;">
+          <div style="position:relative;">
+            <i class="fas fa-search" style="position:absolute; left:1.25rem; top:50%; transform:translateY(-50%); color:var(--accent-cyan);"></i>
+            <input type="text" id="tool-search" placeholder="Search cyber tools by name, category, or purpose..." style="width:100%; padding:0.85rem 1rem 0.85rem 3rem; background:rgba(0,0,0,0.3); border:1px solid var(--border-color); border-radius:var(--radius-md); color:var(--text-primary);" />
+          </div>
+
+          <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
+            <button class="tool-filter-btn active" data-filter="all">All Tools</button>
+            <button class="tool-filter-btn" data-filter="network-security">Network Security</button>
+            <button class="tool-filter-btn" data-filter="web-security">Web Security</button>
+            <button class="tool-filter-btn" data-filter="penetration-testing">Penetration Testing</button>
+            <button class="tool-filter-btn" data-filter="siem">SIEM</button>
+            <button class="tool-filter-btn" data-filter="vulnerability-assessment">Vulnerability Assessment</button>
+            <button class="tool-filter-btn" data-filter="ids/ips">IDS/IPS</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOOLS GRID (Populated by js/tools.js) -->
+      <div id="tools-grid" style="display:grid; grid-template-columns: repeat(3, 1fr); gap:1.75rem;">
+        <!-- Dynamic Tool Cards -->
+      </div>
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>Developed by Siva Sankar – PhishGuard Security Tool</p>
+        <p>For educational and cybersecurity awareness purposes only.</p>
+        <p>For any suggestions, contact: 9666241489</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/tools.js"></script>
+</body>
+</html>
