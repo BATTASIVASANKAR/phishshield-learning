@@ -1,0 +1,146 @@
+/* ==========================================================================
+   PHISHSHIELD - ANIMATIONS & CYBER EFFECTS STYLESHEET
+   Keyframes, Cyber Grid, Glowing Borders, Radar Sweeps, Micro-interactions
+   ========================================================================== */
+
+/* Background Canvas Particles */
+#particle-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+/* Cyber Grid Background Effect */
+.cyber-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  position: relative;
+}
+
+.cyber-grid-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, transparent 20%, var(--bg-primary) 90%);
+  pointer-events: none;
+}
+
+/* Hero Shield Scanner Animation */
+@keyframes shieldPulse {
+  0% {
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3), inset 0 0 15px rgba(0, 240, 255, 0.2);
+    border-color: rgba(0, 240, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(0, 240, 255, 0.7), inset 0 0 30px rgba(139, 92, 246, 0.5);
+    border-color: rgba(139, 92, 246, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3), inset 0 0 15px rgba(0, 240, 255, 0.2);
+    border-color: rgba(0, 240, 255, 0.4);
+  }
+}
+
+.animated-shield {
+  animation: shieldPulse 4s infinite ease-in-out;
+}
+
+/* Typing Caret Animation */
+@keyframes blinkCaret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--accent-cyan); }
+}
+
+.typing-text::after {
+  content: '|';
+  display: inline-block;
+  animation: blinkCaret 0.8s infinite;
+  color: var(--accent-cyan);
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+/* Glowing Border Animation */
+@keyframes borderGlow {
+  0% { border-color: rgba(0, 240, 255, 0.3); }
+  50% { border-color: rgba(139, 92, 246, 0.6); }
+  100% { border-color: rgba(0, 240, 255, 0.3); }
+}
+
+.glow-border {
+  animation: borderGlow 3s infinite linear;
+}
+
+/* Radar Sweep Effect */
+@keyframes radarSweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.radar-sweep-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid var(--border-cyan);
+  background: radial-gradient(circle, rgba(0,240,255,0.05) 0%, rgba(7,10,18,0.9) 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.radar-sweep-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(45deg, rgba(0, 240, 255, 0.4), transparent 60%);
+  transform-origin: top left;
+  animation: radarSweep 3s infinite linear;
+}
+
+/* Floating Animation */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.floating-icon {
+  animation: floatY 4s ease-in-out infinite;
+}
+
+/* Progress Indicator Scroll Bar */
+.scroll-progress-bar {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+  width: 0%;
+  z-index: 1001;
+  transition: width 0.1s ease-out;
+}
+
+/* Pulse Badge Effect */
+@keyframes pulseDot {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.live-pulse {
+  width: 8px;
+  height: 8px;
+  background-color: var(--success);
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulseDot 2s infinite;
+}
