@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Security Basics | PhishShield Resources</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #1e293b; max-width: 800px; margin: 0 auto; padding: 2rem; }
+    h1 { font-size: 1.8rem; color: #0f172a; margin-bottom: 0.5rem; border-bottom: 3px solid #0ea5e9; padding-bottom: 0.5rem; }
+    h2 { font-size: 1rem; color: #64748b; margin-bottom: 1.5rem; }
+    h3 { font-size: 1.2rem; color: #0f172a; margin: 1.5rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e2e8f0; }
+    p { margin-bottom: 0.75rem; font-size: 0.95rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; font-size: 0.92rem; }
+    strong { color: #0f172a; }
+    .meta { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .meta span { font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 4px; background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+    .takeaways { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 1.25rem; margin-top: 1.5rem; }
+    .takeaways h4 { color: #166534; margin-bottom: 0.5rem; }
+    .takeaways li::before { content: '✓ '; color: #16a34a; font-weight: bold; }
+    .takeaways ul { list-style: none; padding-left: 0; }
+    .tips { background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 1.25rem; margin-top: 1rem; }
+    .tips h4 { color: #7c3aed; margin-bottom: 0.5rem; }
+    .tips li::before { content: '🛡️ '; }
+    .tips ul { list-style: none; padding-left: 0; }
+    .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; text-align: center; }
+    .highlight-box { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .warning-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .flow-diagram { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; margin: 1rem 0; padding: 1rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+    .flow-step { background: #e0f2fe; border: 1px solid #7dd3fc; border-radius: 6px; padding: 0.5rem 1.5rem; color: #0369a1; font-weight: 600; text-align: center; }
+    .flow-arrow { color: #94a3b8; font-size: 1.2rem; }
+    @media print { body { padding: 1rem; } h1 { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <h1>Network Security Basics</h1>
+  <h2>PhishShield — Cybersecurity Education Resource</h2>
+  <div class="meta">
+    <span>📂 Network Security</span>
+    <span>📊 Intermediate</span>
+    <span>📄 Guide</span>
+  </div>
+  <h3>Table of Contents</h3><ol><li>Network Security Fundamentals</li><li>Firewalls</li><li>IDS & IPS</li><li>VPN</li><li>Proxy Servers</li><li>NAT</li><li>Common Ports</li><li>Secure Protocols</li><li>Network Segmentation</li><li>Best Practices</li></ol>
+  
+      <h3>Network Security Fundamentals</h3>
+      <p>Network security involves policies, practices, and technologies designed to protect the integrity, confidentiality, and accessibility of computer networks and data. It uses a defense-in-depth approach with multiple layers of protection.</p>
+
+      <h3>Firewalls</h3>
+      <p>Firewalls monitor and control incoming and outgoing network traffic based on predetermined security rules:</p>
+      <ul>
+        <li><strong>Packet Filtering:</strong> Examines individual packets based on source/destination IP, port, and protocol</li>
+        <li><strong>Stateful Inspection:</strong> Tracks active connections and makes decisions based on context</li>
+        <li><strong>Application Layer (WAF):</strong> Inspects application-level traffic (HTTP, HTTPS)</li>
+        <li><strong>Next-Generation (NGFW):</strong> Combines traditional firewall with deep packet inspection, IPS, and application awareness</li>
+      </ul>
+
+      <h3>IDS & IPS</h3>
+      <p><strong>IDS (Intrusion Detection System):</strong> Passively monitors network traffic and alerts administrators to suspicious activity. Does not block traffic. Types: Network-based (NIDS), Host-based (HIDS). Examples: Snort, Suricata.</p>
+      <p><strong>IPS (Intrusion Prevention System):</strong> Actively blocks malicious traffic in real-time. Sits inline with network traffic. Can drop packets, reset connections, or block source IPs.</p>
+
+      <h3>VPN (Virtual Private Network)</h3>
+      <p>VPNs create encrypted tunnels between your device and a VPN server, protecting your traffic from eavesdropping on untrusted networks. Protocols: WireGuard, OpenVPN, IPSec/IKEv2.</p>
+
+      <h3>Proxy Servers</h3>
+      <p>Proxy servers act as intermediaries between users and the internet. They can filter content, cache data, and mask IP addresses. Types: Forward proxy, reverse proxy, transparent proxy, SOCKS proxy.</p>
+
+      <h3>NAT (Network Address Translation)</h3>
+      <p>NAT translates private IP addresses to public IP addresses, allowing multiple devices to share a single public IP. It provides a basic level of security by hiding internal network structure.</p>
+
+      <h3>Common Ports</h3>
+      <ul>
+        <li><strong>20/21:</strong> FTP (File Transfer)</li>
+        <li><strong>22:</strong> SSH (Secure Shell)</li>
+        <li><strong>25:</strong> SMTP (Email Sending)</li>
+        <li><strong>53:</strong> DNS (Domain Resolution)</li>
+        <li><strong>80:</strong> HTTP (Web)</li>
+        <li><strong>443:</strong> HTTPS (Secure Web)</li>
+        <li><strong>3389:</strong> RDP (Remote Desktop)</li>
+        <li><strong>3306:</strong> MySQL Database</li>
+      </ul>
+
+      <h3>Secure Protocols</h3>
+      <ul>
+        <li><strong>HTTPS</strong> instead of HTTP (encrypted web traffic)</li>
+        <li><strong>SSH</strong> instead of Telnet (encrypted remote access)</li>
+        <li><strong>SFTP/SCP</strong> instead of FTP (encrypted file transfer)</li>
+        <li><strong>TLS 1.3</strong> for transport layer encryption</li>
+        <li><strong>WPA3</strong> for Wi-Fi security</li>
+      </ul>
+
+      <h3>Network Segmentation</h3>
+      <p>Dividing a network into smaller segments or subnets to limit the spread of threats. Use VLANs, firewalls, and access controls to isolate critical systems. The principle: if an attacker breaches one segment, they cannot easily access others.</p>
+
+      <h3>Basic Network Security Best Practices</h3>
+      <ul>
+        <li>Change default credentials on all network devices</li>
+        <li>Disable unused ports and services</li>
+        <li>Implement network segmentation</li>
+        <li>Use VPNs for remote access</li>
+        <li>Monitor network traffic for anomalies</li>
+        <li>Keep firmware and software updated</li>
+        <li>Use strong Wi-Fi encryption (WPA3)</li>
+        <li>Implement the principle of least privilege</li>
+      </ul>
+    
+  <div class="takeaways"><h4>✅ Key Takeaways</h4><ul><li>Defense-in-depth uses multiple security layers for comprehensive protection</li><li>Firewalls are the first line of network defense</li><li>VPNs encrypt traffic but don't make you anonymous</li><li>Network segmentation limits the blast radius of breaches</li><li>Always use secure protocols (HTTPS, SSH, SFTP) over insecure ones</li></ul></div>
+  <div class="tips"><h4>🛡️ Security Tips</h4><ul><li>Change default passwords on all network devices</li><li>Disable unused ports and services</li><li>Use network monitoring tools to detect anomalies</li><li>Implement the principle of least privilege for network access</li></ul></div>
+  <div class="footer">
+    <p>© 2026 PhishShield — Cybersecurity Awareness Portal</p>
+    <p>All resources are for cybersecurity education and awareness purposes only.</p>
+  </div>
+</body>
+</html>

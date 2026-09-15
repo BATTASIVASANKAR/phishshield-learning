@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Safety Handbook | PhishShield Resources</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #1e293b; max-width: 800px; margin: 0 auto; padding: 2rem; }
+    h1 { font-size: 1.8rem; color: #0f172a; margin-bottom: 0.5rem; border-bottom: 3px solid #0ea5e9; padding-bottom: 0.5rem; }
+    h2 { font-size: 1rem; color: #64748b; margin-bottom: 1.5rem; }
+    h3 { font-size: 1.2rem; color: #0f172a; margin: 1.5rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e2e8f0; }
+    p { margin-bottom: 0.75rem; font-size: 0.95rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; font-size: 0.92rem; }
+    strong { color: #0f172a; }
+    .meta { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .meta span { font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 4px; background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+    .takeaways { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 1.25rem; margin-top: 1.5rem; }
+    .takeaways h4 { color: #166534; margin-bottom: 0.5rem; }
+    .takeaways li::before { content: '✓ '; color: #16a34a; font-weight: bold; }
+    .takeaways ul { list-style: none; padding-left: 0; }
+    .tips { background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 1.25rem; margin-top: 1rem; }
+    .tips h4 { color: #7c3aed; margin-bottom: 0.5rem; }
+    .tips li::before { content: '🛡️ '; }
+    .tips ul { list-style: none; padding-left: 0; }
+    .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; text-align: center; }
+    .highlight-box { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .warning-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .flow-diagram { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; margin: 1rem 0; padding: 1rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+    .flow-step { background: #e0f2fe; border: 1px solid #7dd3fc; border-radius: 6px; padding: 0.5rem 1.5rem; color: #0369a1; font-weight: 600; text-align: center; }
+    .flow-arrow { color: #94a3b8; font-size: 1.2rem; }
+    @media print { body { padding: 1rem; } h1 { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <h1>Cyber Safety Handbook</h1>
+  <h2>PhishShield — Cybersecurity Education Resource</h2>
+  <div class="meta">
+    <span>📂 Cybersecurity Basics</span>
+    <span>📊 Beginner</span>
+    <span>📄 Handbook</span>
+  </div>
+  <h3>Table of Contents</h3><ol><li>Account Security</li><li>Password Security</li><li>Email Security</li><li>Browser Security</li><li>Mobile Security</li><li>Social Media Safety</li><li>Banking Safety</li><li>Public Wi-Fi Safety</li><li>File Safety</li><li>Phishing Prevention</li><li>Incident Response Basics</li></ol>
+  
+      <h3>Account Security</h3>
+      <ul>
+        <li>Use a unique, strong password for every account</li>
+        <li>Enable MFA on all critical accounts (email, banking, social media)</li>
+        <li>Review account activity and login history regularly</li>
+        <li>Set up account recovery options (backup email, phone)</li>
+        <li>Remove unused accounts to reduce your attack surface</li>
+        <li>Be cautious with third-party app connections and permissions</li>
+      </ul>
+
+      <h3>Password Security</h3>
+      <ul>
+        <li>Use 16+ character passwords or passphrases</li>
+        <li>Use a password manager (Bitwarden, 1Password, KeePass)</li>
+        <li>Never reuse passwords across accounts</li>
+        <li>Never share passwords with anyone</li>
+        <li>Change passwords immediately if a service reports a breach</li>
+        <li>Use passkeys where available</li>
+      </ul>
+
+      <h3>Email Security</h3>
+      <ul>
+        <li>Verify sender addresses before responding or clicking links</li>
+        <li>Be suspicious of urgent or threatening language</li>
+        <li>Never open unexpected attachments</li>
+        <li>Hover over links to check actual URLs</li>
+        <li>Use email filtering and anti-spam features</li>
+        <li>Report phishing emails to your email provider</li>
+      </ul>
+
+      <h3>Browser Security</h3>
+      <ul>
+        <li>Keep your browser updated to the latest version</li>
+        <li>Only install extensions from official stores</li>
+        <li>Enable HTTPS-Only mode</li>
+        <li>Block pop-ups and third-party cookies</li>
+        <li>Clear browsing data regularly</li>
+        <li>Use private browsing on shared computers</li>
+      </ul>
+
+      <h3>Mobile Security</h3>
+      <ul>
+        <li>Keep your phone OS and apps updated</li>
+        <li>Only install apps from official stores</li>
+        <li>Review and minimize app permissions</li>
+        <li>Use biometric authentication and strong PIN</li>
+        <li>Enable remote wipe and locate features</li>
+        <li>Avoid sideloading apps from unknown sources</li>
+      </ul>
+
+      <h3>Social Media Safety</h3>
+      <ul>
+        <li>Limit personal information shared publicly</li>
+        <li>Use strong privacy settings on all platforms</li>
+        <li>Be cautious of friend requests from strangers</li>
+        <li>Don't share vacation plans or location in real-time</li>
+        <li>Be wary of quizzes and surveys that harvest personal data</li>
+        <li>Enable login alerts and two-factor authentication</li>
+      </ul>
+
+      <h3>Banking Safety</h3>
+      <ul>
+        <li>Use official banking apps and websites only</li>
+        <li>Enable transaction notifications and alerts</li>
+        <li>Never share OTP, PIN, or CVV with anyone</li>
+        <li>Verify UPI payment requests carefully before approving</li>
+        <li>Don't conduct banking on public Wi-Fi without VPN</li>
+        <li>Regularly check account statements for unauthorized transactions</li>
+        <li>Set transaction limits for online payments</li>
+      </ul>
+
+      <h3>Public Wi-Fi Safety</h3>
+      <ul>
+        <li>Avoid accessing sensitive accounts on public Wi-Fi</li>
+        <li>Use a VPN when connecting to public networks</li>
+        <li>Disable auto-connect to open Wi-Fi networks</li>
+        <li>Forget public networks after disconnecting</li>
+        <li>Turn off file sharing on public networks</li>
+        <li>Use mobile data for sensitive transactions when possible</li>
+      </ul>
+
+      <h3>File Safety</h3>
+      <ul>
+        <li>Scan downloaded files with antivirus before opening</li>
+        <li>Be cautious with email attachments, especially executable files</li>
+        <li>Back up important files using the 3-2-1 rule (3 copies, 2 media types, 1 offsite)</li>
+        <li>Use cloud storage with encryption for sensitive files</li>
+        <li>Don't plug in unknown USB drives</li>
+      </ul>
+
+      <h3>Phishing Prevention</h3>
+      <ul>
+        <li>Verify sender identity before clicking any link</li>
+        <li>Be suspicious of urgent messages requesting immediate action</li>
+        <li>Contact organizations directly using official channels to verify requests</li>
+        <li>Use anti-phishing browser extensions and email filters</li>
+        <li>Educate yourself about the latest phishing techniques</li>
+        <li>Report phishing attempts to protect others</li>
+      </ul>
+
+      <h3>Incident Response Basics</h3>
+      <ol>
+        <li><strong>Stay Calm:</strong> Don't panic — quick, measured actions are more effective</li>
+        <li><strong>Disconnect:</strong> If you suspect compromise, disconnect from the internet</li>
+        <li><strong>Change Passwords:</strong> Change passwords for potentially affected accounts</li>
+        <li><strong>Enable MFA:</strong> Add extra security layers to compromised accounts</li>
+        <li><strong>Scan:</strong> Run a full antivirus/anti-malware scan</li>
+        <li><strong>Monitor:</strong> Check accounts for unauthorized activity</li>
+        <li><strong>Report:</strong> Notify your IT team, bank, or relevant authorities</li>
+        <li><strong>Document:</strong> Keep records of what happened and actions taken</li>
+        <li><strong>Learn:</strong> Understand how the incident happened and prevent recurrence</li>
+      </ol>
+    
+  <div class="takeaways"><h4>✅ Key Takeaways</h4><ul><li>Cyber safety starts with strong, unique passwords and MFA on all accounts</li><li>Be cautious with what you share on social media — attackers use it for targeting</li><li>Keep all devices and software updated — patches fix known vulnerabilities</li><li>When in doubt, verify independently through official channels</li><li>Know what to do when something goes wrong — have a basic incident response plan</li></ul></div>
+  <div class="tips"><h4>🛡️ Security Tips</h4><ul><li>Set up a password manager today — it's the single most impactful security improvement</li><li>Enable MFA on email, banking, and social media accounts first</li><li>Regularly check haveibeenpwned.com for compromised credentials</li><li>Teach these practices to family members, especially elderly relatives</li></ul></div>
+  <div class="footer">
+    <p>© 2026 PhishShield — Cybersecurity Awareness Portal</p>
+    <p>All resources are for cybersecurity education and awareness purposes only.</p>
+  </div>
+</body>
+</html>

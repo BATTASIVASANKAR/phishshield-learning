@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Awareness Guide | PhishShield Resources</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #1e293b; max-width: 800px; margin: 0 auto; padding: 2rem; }
+    h1 { font-size: 1.8rem; color: #0f172a; margin-bottom: 0.5rem; border-bottom: 3px solid #0ea5e9; padding-bottom: 0.5rem; }
+    h2 { font-size: 1rem; color: #64748b; margin-bottom: 1.5rem; }
+    h3 { font-size: 1.2rem; color: #0f172a; margin: 1.5rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e2e8f0; }
+    p { margin-bottom: 0.75rem; font-size: 0.95rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; font-size: 0.92rem; }
+    strong { color: #0f172a; }
+    .meta { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .meta span { font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 4px; background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+    .takeaways { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 1.25rem; margin-top: 1.5rem; }
+    .takeaways h4 { color: #166534; margin-bottom: 0.5rem; }
+    .takeaways li::before { content: '✓ '; color: #16a34a; font-weight: bold; }
+    .takeaways ul { list-style: none; padding-left: 0; }
+    .tips { background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 1.25rem; margin-top: 1rem; }
+    .tips h4 { color: #7c3aed; margin-bottom: 0.5rem; }
+    .tips li::before { content: '🛡️ '; }
+    .tips ul { list-style: none; padding-left: 0; }
+    .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; text-align: center; }
+    .highlight-box { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .warning-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .flow-diagram { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; margin: 1rem 0; padding: 1rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+    .flow-step { background: #e0f2fe; border: 1px solid #7dd3fc; border-radius: 6px; padding: 0.5rem 1.5rem; color: #0369a1; font-weight: 600; text-align: center; }
+    .flow-arrow { color: #94a3b8; font-size: 1.2rem; }
+    @media print { body { padding: 1rem; } h1 { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <h1>Phishing Awareness Guide</h1>
+  <h2>PhishShield — Cybersecurity Education Resource</h2>
+  <div class="meta">
+    <span>📂 Phishing</span>
+    <span>📊 Beginner</span>
+    <span>📄 Guide</span>
+  </div>
+  <h3>Table of Contents</h3><ol><li>What is Phishing?</li><li>How Phishing Works</li><li>Email Phishing</li><li>Spear Phishing</li><li>Smishing (SMS Phishing)</li><li>Vishing (Voice Phishing)</li><li>QR Phishing (Quishing)</li><li>Social Media Phishing</li><li>AI-Powered Phishing</li><li>Red Flags & Detection</li><li>What To Do After Clicking</li><li>Prevention Checklist</li></ol>
+  
+      <h3>What is Phishing?</h3>
+      <p>Phishing is a type of social engineering attack where attackers impersonate trusted entities to trick victims into revealing sensitive information such as passwords, credit card numbers, or personal data. It remains the #1 attack vector used in data breaches worldwide.</p>
+
+      <h3>How Phishing Works</h3>
+      <ol>
+        <li><strong>Research:</strong> Attacker gathers information about the target from social media, data leaks, or public records.</li>
+        <li><strong>Bait Creation:</strong> A convincing fake message (email, SMS, website) is crafted to mimic a trusted source.</li>
+        <li><strong>Delivery:</strong> The phishing message is sent to the victim via email, SMS, phone call, or social media.</li>
+        <li><strong>Exploitation:</strong> Victim clicks a malicious link, opens an attachment, or provides credentials.</li>
+        <li><strong>Data Theft:</strong> Stolen information is used for identity theft, financial fraud, or further attacks.</li>
+      </ol>
+
+      <h3>Email Phishing</h3>
+      <p>The most common form. Mass emails are sent impersonating banks, tech companies, or government agencies. They contain fake links leading to credential-harvesting websites that look identical to legitimate login pages.</p>
+
+      <h3>Spear Phishing</h3>
+      <p>Highly targeted attacks aimed at specific individuals or organizations. Attackers research their targets extensively to craft personalized, convincing messages. Much harder to detect than generic phishing.</p>
+
+      <h3>Smishing (SMS Phishing)</h3>
+      <p>Phishing via text messages. Common tactics include fake delivery notifications, bank alerts, OTP requests, and prize notifications. Links in SMS often lead to phishing websites or malware downloads.</p>
+
+      <h3>Vishing (Voice Phishing)</h3>
+      <p>Phone-based phishing where attackers call pretending to be bank representatives, tech support, or government officials. They use urgency and fear to extract sensitive information or convince victims to transfer money.</p>
+
+      <h3>QR Phishing (Quishing)</h3>
+      <p>Attackers create malicious QR codes that redirect to phishing websites when scanned. These can be placed on posters, menus, parking meters, or sent via email. Always verify QR code sources before scanning.</p>
+
+      <h3>Social Media Phishing</h3>
+      <p>Fake profiles, friend requests, and direct messages on platforms like LinkedIn, Facebook, and Instagram. Attackers may impersonate colleagues, recruiters, or celebrities to gain trust.</p>
+
+      <h3>AI-Powered Phishing</h3>
+      <p>Modern attackers use AI to generate highly convincing phishing emails with perfect grammar, personalized content, and deepfake voices or videos. AI tools can automate the creation of thousands of unique phishing messages.</p>
+
+      <h3>Red Flags & Detection</h3>
+      <ul>
+        <li>Suspicious sender domain (e.g., @paypa1.com instead of @paypal.com)</li>
+        <li>Urgent language: "Act now!", "Your account will be suspended!"</li>
+        <li>Generic greetings: "Dear Customer" instead of your name</li>
+        <li>Mismatched URLs when hovering over links</li>
+        <li>Unexpected attachments (especially .exe, .zip, .macro-enabled docs)</li>
+        <li>Spelling and grammar errors (though AI has reduced these)</li>
+        <li>Requests for sensitive information (passwords, OTPs, SSN)</li>
+        <li>Fake login pages with slightly different URLs</li>
+      </ul>
+
+      <h3>How to Verify Messages</h3>
+      <ul>
+        <li>Contact the organization directly using their official website or phone number</li>
+        <li>Do NOT use contact information provided in the suspicious message</li>
+        <li>Check email headers for sender IP and authentication results</li>
+        <li>Use URL scanning tools like VirusTotal before clicking</li>
+      </ul>
+
+      <h3>What To Do After Clicking a Phishing Link</h3>
+      <ol>
+        <li>Disconnect from the internet immediately</li>
+        <li>Change passwords for affected accounts</li>
+        <li>Enable MFA on all accounts</li>
+        <li>Run a full antivirus scan</li>
+        <li>Monitor accounts for unauthorized activity</li>
+        <li>Report to IT security team and relevant authorities</li>
+        <li>Document the incident for future reference</li>
+      </ol>
+
+      <h3>Prevention Checklist</h3>
+      <ul>
+        <li>Verify sender identity before responding to any message</li>
+        <li>Hover over links to check actual URL destinations</li>
+        <li>Never share passwords, OTPs, or PINs via any channel</li>
+        <li>Enable MFA on all accounts</li>
+        <li>Keep security software updated</li>
+        <li>Report suspicious messages immediately</li>
+        <li>Use email filtering and anti-phishing tools</li>
+        <li>Attend regular security awareness training</li>
+      </ul>
+    
+  <div class="takeaways"><h4>✅ Key Takeaways</h4><ul><li>Phishing is the most common initial attack vector for data breaches</li><li>Always verify sender identity before clicking any link</li><li>Urgency and fear are primary manipulation tactics</li><li>Hover over links to inspect true destinations before clicking</li><li>Report suspicious messages to your IT/security team</li></ul></div>
+  <div class="tips"><h4>🛡️ Security Tips</h4><ul><li>Never share OTPs or passwords via email, SMS, or phone</li><li>Enable anti-phishing features in your email client</li><li>Verify requests through official channels independently</li><li>Use browser extensions that detect phishing URLs</li></ul></div>
+  <div class="footer">
+    <p>© 2026 PhishShield — Cybersecurity Awareness Portal</p>
+    <p>All resources are for cybersecurity education and awareness purposes only.</p>
+  </div>
+</body>
+</html>

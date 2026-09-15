@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incident Response Quick Guide | PhishShield Resources</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #1e293b; max-width: 800px; margin: 0 auto; padding: 2rem; }
+    h1 { font-size: 1.8rem; color: #0f172a; margin-bottom: 0.5rem; border-bottom: 3px solid #0ea5e9; padding-bottom: 0.5rem; }
+    h2 { font-size: 1rem; color: #64748b; margin-bottom: 1.5rem; }
+    h3 { font-size: 1.2rem; color: #0f172a; margin: 1.5rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e2e8f0; }
+    p { margin-bottom: 0.75rem; font-size: 0.95rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; font-size: 0.92rem; }
+    strong { color: #0f172a; }
+    .meta { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .meta span { font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 4px; background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+    .takeaways { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 1.25rem; margin-top: 1.5rem; }
+    .takeaways h4 { color: #166534; margin-bottom: 0.5rem; }
+    .takeaways li::before { content: '✓ '; color: #16a34a; font-weight: bold; }
+    .takeaways ul { list-style: none; padding-left: 0; }
+    .tips { background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 1.25rem; margin-top: 1rem; }
+    .tips h4 { color: #7c3aed; margin-bottom: 0.5rem; }
+    .tips li::before { content: '🛡️ '; }
+    .tips ul { list-style: none; padding-left: 0; }
+    .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; text-align: center; }
+    .highlight-box { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .warning-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .flow-diagram { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; margin: 1rem 0; padding: 1rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+    .flow-step { background: #e0f2fe; border: 1px solid #7dd3fc; border-radius: 6px; padding: 0.5rem 1.5rem; color: #0369a1; font-weight: 600; text-align: center; }
+    .flow-arrow { color: #94a3b8; font-size: 1.2rem; }
+    @media print { body { padding: 1rem; } h1 { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <h1>Incident Response Quick Guide</h1>
+  <h2>PhishShield — Cybersecurity Education Resource</h2>
+  <div class="meta">
+    <span>📂 SOC & Incident Response</span>
+    <span>📊 Intermediate</span>
+    <span>📄 Guide</span>
+  </div>
+  <h3>Table of Contents</h3><ol><li>IR Lifecycle Overview</li><li>Phase 1: Preparation</li><li>Phase 2: Identification</li><li>Phase 3: Containment</li><li>Phase 4: Eradication</li><li>Phase 5: Recovery</li><li>Phase 6: Lessons Learned</li><li>After Clicking a Phishing Link</li><li>After Credential Theft</li><li>After Malware Infection</li><li>Evidence Preservation</li><li>Incident Reporting</li></ol>
+  
+      <h3>Incident Response Lifecycle</h3>
+      <div class="flow-diagram">
+        <div class="flow-step">Preparation</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Identification</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Containment</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Eradication</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Recovery</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Lessons Learned</div>
+      </div>
+
+      <h3>Phase 1: Preparation</h3>
+      <ul>
+        <li>Develop and document incident response policies and procedures</li>
+        <li>Establish an incident response team with clear roles</li>
+        <li>Deploy security monitoring tools (SIEM, EDR, IDS/IPS)</li>
+        <li>Conduct regular training and tabletop exercises</li>
+        <li>Maintain up-to-date contact lists and escalation procedures</li>
+        <li>Ensure backup systems are tested and functional</li>
+      </ul>
+
+      <h3>Phase 2: Identification</h3>
+      <ul>
+        <li>Detect potential incidents through alerts, logs, and user reports</li>
+        <li>Determine if the event is a true security incident</li>
+        <li>Assess scope, impact, and severity</li>
+        <li>Classify the incident type (malware, phishing, unauthorized access, etc.)</li>
+        <li>Document initial findings and timeline</li>
+      </ul>
+
+      <h3>Phase 3: Containment</h3>
+      <ul>
+        <li><strong>Short-term:</strong> Isolate affected systems from the network</li>
+        <li><strong>Long-term:</strong> Apply temporary fixes while preparing for full remediation</li>
+        <li>Preserve forensic evidence before making changes</li>
+        <li>Block malicious IPs, domains, and hashes</li>
+        <li>Disable compromised accounts</li>
+      </ul>
+
+      <h3>Phase 4: Eradication</h3>
+      <ul>
+        <li>Remove malware and malicious artifacts</li>
+        <li>Patch exploited vulnerabilities</li>
+        <li>Reset compromised credentials</li>
+        <li>Remove unauthorized access points (backdoors)</li>
+        <li>Verify complete removal using scanning tools</li>
+      </ul>
+
+      <h3>Phase 5: Recovery</h3>
+      <ul>
+        <li>Restore systems from verified clean backups</li>
+        <li>Rebuild compromised systems if necessary</li>
+        <li>Monitor systems closely for signs of reinfection</li>
+        <li>Gradually restore normal operations</li>
+        <li>Verify system integrity before returning to production</li>
+      </ul>
+
+      <h3>Phase 6: Lessons Learned</h3>
+      <ul>
+        <li>Conduct a post-incident review meeting</li>
+        <li>Document what happened, what worked, and what didn't</li>
+        <li>Update incident response procedures based on findings</li>
+        <li>Implement additional controls to prevent recurrence</li>
+        <li>Share relevant threat intelligence with the security community</li>
+      </ul>
+
+      <h3>What To Do After Clicking a Phishing Link</h3>
+      <ol>
+        <li>Disconnect from the internet immediately</li>
+        <li>Do NOT enter any credentials if prompted</li>
+        <li>Run a full antivirus scan</li>
+        <li>Change passwords for any potentially compromised accounts</li>
+        <li>Enable MFA on affected accounts</li>
+        <li>Monitor accounts for unauthorized activity</li>
+        <li>Report the incident to your IT/security team</li>
+      </ol>
+
+      <h3>What To Do After Credential Theft</h3>
+      <ol>
+        <li>Change the compromised password immediately</li>
+        <li>Change the password on any other account using the same credentials</li>
+        <li>Enable MFA on all accounts</li>
+        <li>Check account activity for unauthorized actions</li>
+        <li>Set up login alerts and notifications</li>
+        <li>Consider placing a fraud alert on credit reports (if financial accounts)</li>
+      </ol>
+
+      <h3>What To Do After Malware Infection</h3>
+      <ol>
+        <li>Disconnect the device from the network</li>
+        <li>Do NOT shut down — preserve memory evidence</li>
+        <li>Run a full scan with updated antivirus software</li>
+        <li>If enterprise: contact SOC/IR team for forensic investigation</li>
+        <li>Reset credentials used on the infected device</li>
+        <li>Restore from known clean backup if needed</li>
+      </ol>
+
+      <h3>Evidence Preservation</h3>
+      <ul>
+        <li>Take screenshots of suspicious activity</li>
+        <li>Preserve email headers from phishing messages</li>
+        <li>Save log files from affected systems</li>
+        <li>Record network traffic if possible</li>
+        <li>Document timeline of events</li>
+        <li>Maintain chain of custody for all evidence</li>
+      </ul>
+
+      <h3>Incident Reporting</h3>
+      <ul>
+        <li>Report to internal IT/security team immediately</li>
+        <li>File reports with relevant authorities (CERT, law enforcement)</li>
+        <li>Notify affected stakeholders and data subjects if required</li>
+        <li>Document the incident for compliance and regulatory requirements</li>
+        <li>Share IOCs (Indicators of Compromise) with trusted partners</li>
+      </ul>
+    
+  <div class="takeaways"><h4>✅ Key Takeaways</h4><ul><li>Preparation is the most important phase — have plans ready before incidents occur</li><li>Containment should be swift to limit damage</li><li>Document everything during incident response for the Lessons Learned phase</li><li>Preserve evidence before eradication for forensic analysis</li><li>Conduct post-incident reviews to improve future response</li></ul></div>
+  <div class="tips"><h4>🛡️ Security Tips</h4><ul><li>Create and regularly test your incident response plan</li><li>Build an IR team with clear roles and responsibilities</li><li>Keep offline backups for recovery from ransomware</li><li>Maintain updated contact lists for IR team and stakeholders</li></ul></div>
+  <div class="footer">
+    <p>© 2026 PhishShield — Cybersecurity Awareness Portal</p>
+    <p>All resources are for cybersecurity education and awareness purposes only.</p>
+  </div>
+</body>
+</html>

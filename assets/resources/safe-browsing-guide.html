@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Browsing Guide | PhishShield Resources</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #1e293b; max-width: 800px; margin: 0 auto; padding: 2rem; }
+    h1 { font-size: 1.8rem; color: #0f172a; margin-bottom: 0.5rem; border-bottom: 3px solid #0ea5e9; padding-bottom: 0.5rem; }
+    h2 { font-size: 1rem; color: #64748b; margin-bottom: 1.5rem; }
+    h3 { font-size: 1.2rem; color: #0f172a; margin: 1.5rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e2e8f0; }
+    p { margin-bottom: 0.75rem; font-size: 0.95rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; font-size: 0.92rem; }
+    strong { color: #0f172a; }
+    .meta { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .meta span { font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 4px; background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+    .takeaways { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 1.25rem; margin-top: 1.5rem; }
+    .takeaways h4 { color: #166534; margin-bottom: 0.5rem; }
+    .takeaways li::before { content: '✓ '; color: #16a34a; font-weight: bold; }
+    .takeaways ul { list-style: none; padding-left: 0; }
+    .tips { background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 1.25rem; margin-top: 1rem; }
+    .tips h4 { color: #7c3aed; margin-bottom: 0.5rem; }
+    .tips li::before { content: '🛡️ '; }
+    .tips ul { list-style: none; padding-left: 0; }
+    .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; text-align: center; }
+    .highlight-box { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .warning-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .flow-diagram { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; margin: 1rem 0; padding: 1rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+    .flow-step { background: #e0f2fe; border: 1px solid #7dd3fc; border-radius: 6px; padding: 0.5rem 1.5rem; color: #0369a1; font-weight: 600; text-align: center; }
+    .flow-arrow { color: #94a3b8; font-size: 1.2rem; }
+    @media print { body { padding: 1rem; } h1 { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <h1>Safe Browsing Guide</h1>
+  <h2>PhishShield — Cybersecurity Education Resource</h2>
+  <div class="meta">
+    <span>📂 Web Security</span>
+    <span>📊 Beginner</span>
+    <span>📄 Guide</span>
+  </div>
+  <h3>Table of Contents</h3><ol><li>HTTPS & TLS</li><li>Domain Names & Typosquatting</li><li>Browser Updates</li><li>Extensions & Add-ons</li><li>Safe Downloads</li><li>Pop-ups & Redirects</li><li>Cookies & Tracking</li><li>Password Autofill</li><li>Public Computer Safety</li><li>Browser Privacy Settings</li></ol>
+  
+      <h3>HTTPS & TLS</h3>
+      <p><strong>HTTPS (HyperText Transfer Protocol Secure)</strong> encrypts data between your browser and the website using TLS (Transport Layer Security). Always verify the padlock icon in the address bar before entering sensitive information.</p>
+      <p><strong>Warning:</strong> HTTPS only means the connection is encrypted — it doesn't guarantee the website is legitimate. Phishing sites can also use HTTPS.</p>
+
+      <h3>Domain Names & Typosquatting</h3>
+      <p>Typosquatting is when attackers register domains that are slight misspellings of popular websites:</p>
+      <ul>
+        <li>gogle.com instead of google.com</li>
+        <li>amaz0n.com instead of amazon.com</li>
+        <li>faceb00k.com instead of facebook.com</li>
+      </ul>
+      <p>Always check the URL carefully, especially when clicking links from emails or messages.</p>
+
+      <h3>Browser Updates</h3>
+      <p>Keep your browser updated to the latest version. Browser updates patch critical security vulnerabilities that could be exploited by attackers. Enable automatic updates whenever possible.</p>
+
+      <h3>Extensions & Add-ons</h3>
+      <ul>
+        <li>Only install extensions from official browser stores</li>
+        <li>Check reviews, ratings, and number of users before installing</li>
+        <li>Review extension permissions — be wary of extensions requesting broad access</li>
+        <li>Remove extensions you no longer use</li>
+        <li>Recommended security extensions: uBlock Origin, HTTPS Everywhere, Privacy Badger</li>
+      </ul>
+
+      <h3>Safe Downloads</h3>
+      <ul>
+        <li>Only download software from official websites or app stores</li>
+        <li>Verify file checksums (SHA-256) when available</li>
+        <li>Scan downloaded files with antivirus before opening</li>
+        <li>Be cautious of "free" versions of paid software</li>
+        <li>Avoid downloading from pop-up prompts or unknown sources</li>
+      </ul>
+
+      <h3>Pop-ups & Redirects</h3>
+      <p>Enable pop-up blockers in your browser. Never click on pop-ups claiming your computer is infected or that you've won a prize. These are common social engineering tactics that lead to malware or scam sites.</p>
+
+      <h3>Cookies & Tracking</h3>
+      <ul>
+        <li>Regularly clear cookies and browsing data</li>
+        <li>Block third-party cookies in browser settings</li>
+        <li>Use cookie management extensions to control which sites can store cookies</li>
+        <li>Understand that cookies can track your activity across websites</li>
+      </ul>
+
+      <h3>Password Autofill</h3>
+      <p>Be cautious with browser password autofill — it can be exploited by hidden form fields on malicious pages. Use a dedicated password manager instead of browser-built-in autofill for better security.</p>
+
+      <h3>Public Computer Safety</h3>
+      <ul>
+        <li>Always use private/incognito browsing mode</li>
+        <li>Never save passwords on public computers</li>
+        <li>Log out of all accounts when finished</li>
+        <li>Clear browsing data before leaving</li>
+        <li>Avoid accessing sensitive accounts (banking) on public computers</li>
+      </ul>
+
+      <h3>Browser Privacy Settings</h3>
+      <ul>
+        <li>Enable Do Not Track requests</li>
+        <li>Block third-party cookies</li>
+        <li>Disable location sharing for untrusted sites</li>
+        <li>Use HTTPS-Only mode</li>
+        <li>Enable Enhanced Tracking Protection</li>
+        <li>Consider using privacy-focused browsers (Firefox, Brave)</li>
+      </ul>
+    
+  <div class="takeaways"><h4>✅ Key Takeaways</h4><ul><li>Always check for HTTPS and a valid certificate before entering credentials</li><li>Typosquatting uses slightly misspelled domains to trick users</li><li>Only install browser extensions from official stores with good reviews</li><li>Clear cookies and browsing data regularly</li><li>Use private/incognito mode on shared or public computers</li></ul></div>
+  <div class="tips"><h4>🛡️ Security Tips</h4><ul><li>Install uBlock Origin to block malicious ads and trackers</li><li>Enable 'HTTPS-Only Mode' in your browser settings</li><li>Use a DNS service with malware blocking (e.g., Cloudflare 1.1.1.2)</li><li>Review installed browser extensions monthly and remove unused ones</li></ul></div>
+  <div class="footer">
+    <p>© 2026 PhishShield — Cybersecurity Awareness Portal</p>
+    <p>All resources are for cybersecurity education and awareness purposes only.</p>
+  </div>
+</body>
+</html>

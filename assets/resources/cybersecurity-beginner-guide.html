@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Beginner Guide | PhishShield Resources</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #1e293b; max-width: 800px; margin: 0 auto; padding: 2rem; }
+    h1 { font-size: 1.8rem; color: #0f172a; margin-bottom: 0.5rem; border-bottom: 3px solid #0ea5e9; padding-bottom: 0.5rem; }
+    h2 { font-size: 1rem; color: #64748b; margin-bottom: 1.5rem; }
+    h3 { font-size: 1.2rem; color: #0f172a; margin: 1.5rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e2e8f0; }
+    p { margin-bottom: 0.75rem; font-size: 0.95rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; font-size: 0.92rem; }
+    strong { color: #0f172a; }
+    .meta { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .meta span { font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 4px; background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+    .takeaways { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 1.25rem; margin-top: 1.5rem; }
+    .takeaways h4 { color: #166534; margin-bottom: 0.5rem; }
+    .takeaways li::before { content: '✓ '; color: #16a34a; font-weight: bold; }
+    .takeaways ul { list-style: none; padding-left: 0; }
+    .tips { background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 1.25rem; margin-top: 1rem; }
+    .tips h4 { color: #7c3aed; margin-bottom: 0.5rem; }
+    .tips li::before { content: '🛡️ '; }
+    .tips ul { list-style: none; padding-left: 0; }
+    .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; text-align: center; }
+    .highlight-box { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .warning-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .flow-diagram { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; margin: 1rem 0; padding: 1rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+    .flow-step { background: #e0f2fe; border: 1px solid #7dd3fc; border-radius: 6px; padding: 0.5rem 1.5rem; color: #0369a1; font-weight: 600; text-align: center; }
+    .flow-arrow { color: #94a3b8; font-size: 1.2rem; }
+    @media print { body { padding: 1rem; } h1 { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <h1>Cybersecurity Beginner Guide</h1>
+  <h2>PhishShield — Cybersecurity Education Resource</h2>
+  <div class="meta">
+    <span>📂 Cybersecurity Basics</span>
+    <span>📊 Beginner</span>
+    <span>📄 Guide</span>
+  </div>
+  <h3>Table of Contents</h3><ol><li>What is Cybersecurity?</li><li>The CIA Triad</li><li>Threats & Vulnerabilities</li><li>Risk & Attack Surface</li><li>Authentication & Authorization</li><li>Encryption & Hashing</li><li>Multi-Factor Authentication</li><li>Firewalls, IDS & IPS</li><li>Malware & Phishing</li><li>Cyber Hygiene Best Practices</li></ol>
+  
+      <h3>What is Cybersecurity?</h3>
+      <p>Cybersecurity is the practice of protecting systems, networks, programs, and data from digital attacks, unauthorized access, damage, or theft. It encompasses technologies, processes, and practices designed to safeguard information integrity, confidentiality, and availability.</p>
+
+      <h3>The CIA Triad</h3>
+      <p>The CIA Triad is the foundational model for information security:</p>
+      <ul>
+        <li><strong>Confidentiality:</strong> Ensuring that information is accessible only to authorized individuals. Methods include encryption, access controls, and data classification.</li>
+        <li><strong>Integrity:</strong> Maintaining the accuracy and completeness of data. Achieved through hashing, checksums, digital signatures, and version control.</li>
+        <li><strong>Availability:</strong> Ensuring that information and resources are accessible to authorized users when needed. Maintained through redundancy, backups, and disaster recovery plans.</li>
+      </ul>
+
+      <h3>Threats & Vulnerabilities</h3>
+      <p><strong>Threat:</strong> Any potential cause of an unwanted incident that may result in harm to a system or organization. Examples include hackers, malware, insider threats, and natural disasters.</p>
+      <p><strong>Vulnerability:</strong> A weakness in a system that can be exploited by a threat. Examples include unpatched software, weak passwords, misconfigured firewalls, and lack of encryption.</p>
+
+      <h3>Risk & Attack Surface</h3>
+      <p><strong>Risk</strong> = Threat × Vulnerability × Impact. Risk management involves identifying, assessing, and prioritizing risks followed by coordinated efforts to minimize impact.</p>
+      <p><strong>Attack Surface:</strong> The total sum of all possible entry points where an unauthorized user could try to enter or extract data. This includes open ports, running services, web forms, APIs, and physical access points.</p>
+
+      <h3>Authentication & Authorization</h3>
+      <p><strong>Authentication:</strong> Verifying the identity of a user or system (Who are you?). Methods include passwords, biometrics, tokens, and certificates.</p>
+      <p><strong>Authorization:</strong> Determining what an authenticated user is allowed to do (What can you access?). Implemented through role-based access control (RBAC) and permissions.</p>
+
+      <h3>Encryption & Hashing</h3>
+      <p><strong>Encryption:</strong> The process of converting plaintext into ciphertext using an algorithm and a key. It is reversible with the correct key. Common algorithms: AES-256, RSA, ChaCha20.</p>
+      <p><strong>Hashing:</strong> A one-way function that converts data into a fixed-size hash value. It is irreversible. Used for password storage and integrity checks. Common algorithms: SHA-256, bcrypt, Argon2.</p>
+
+      <h3>Multi-Factor Authentication (MFA)</h3>
+      <p>MFA requires two or more independent factors to verify identity:</p>
+      <ul>
+        <li><strong>Something you know:</strong> Password, PIN</li>
+        <li><strong>Something you have:</strong> Phone, hardware key (YubiKey)</li>
+        <li><strong>Something you are:</strong> Fingerprint, face recognition</li>
+      </ul>
+
+      <h3>Firewalls, IDS & IPS</h3>
+      <ul>
+        <li><strong>Firewall:</strong> A network security device that monitors and filters incoming and outgoing traffic based on predefined rules. Types: packet filtering, stateful, application-layer, NGFW.</li>
+        <li><strong>IDS (Intrusion Detection System):</strong> Monitors network traffic for suspicious activity and sends alerts. Does not block traffic.</li>
+        <li><strong>IPS (Intrusion Prevention System):</strong> Actively blocks detected threats in real-time. Sits inline with network traffic.</li>
+      </ul>
+
+      <h3>Malware & Phishing</h3>
+      <p><strong>Malware:</strong> Malicious software designed to harm, including viruses, worms, Trojans, ransomware, spyware, and adware.</p>
+      <p><strong>Phishing:</strong> Social engineering attacks that trick users into revealing sensitive information through fake emails, websites, or messages.</p>
+      <p><strong>Ransomware:</strong> Malware that encrypts victim's files and demands payment for the decryption key.</p>
+
+      <h3>Cyber Hygiene Best Practices</h3>
+      <ul>
+        <li>Use strong, unique passwords for every account</li>
+        <li>Enable MFA everywhere possible</li>
+        <li>Keep all software and systems updated</li>
+        <li>Back up data regularly using the 3-2-1 rule</li>
+        <li>Verify email senders before clicking links</li>
+        <li>Use antivirus and endpoint protection software</li>
+        <li>Avoid using public Wi-Fi without a VPN</li>
+        <li>Review app permissions and remove unused apps</li>
+      </ul>
+    
+  <div class="takeaways"><h4>✅ Key Takeaways</h4><ul><li>Cybersecurity protects systems, networks, and data from digital attacks</li><li>The CIA Triad (Confidentiality, Integrity, Availability) is the foundation of security</li><li>Always use MFA and strong, unique passwords</li><li>Keep software updated and practice good cyber hygiene</li><li>Never click unknown links or download suspicious attachments</li></ul></div>
+  <div class="tips"><h4>🛡️ Security Tips</h4><ul><li>Enable MFA on all critical accounts immediately</li><li>Use a password manager for unique, long passwords</li><li>Regularly update your operating system and applications</li><li>Be cautious with public Wi-Fi networks — use a VPN</li></ul></div>
+  <div class="footer">
+    <p>© 2026 PhishShield — Cybersecurity Awareness Portal</p>
+    <p>All resources are for cybersecurity education and awareness purposes only.</p>
+  </div>
+</body>
+</html>

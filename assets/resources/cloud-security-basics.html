@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Security Basics | PhishShield Resources</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #1e293b; max-width: 800px; margin: 0 auto; padding: 2rem; }
+    h1 { font-size: 1.8rem; color: #0f172a; margin-bottom: 0.5rem; border-bottom: 3px solid #0ea5e9; padding-bottom: 0.5rem; }
+    h2 { font-size: 1rem; color: #64748b; margin-bottom: 1.5rem; }
+    h3 { font-size: 1.2rem; color: #0f172a; margin: 1.5rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e2e8f0; }
+    p { margin-bottom: 0.75rem; font-size: 0.95rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; font-size: 0.92rem; }
+    strong { color: #0f172a; }
+    .meta { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .meta span { font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 4px; background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+    .takeaways { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 1.25rem; margin-top: 1.5rem; }
+    .takeaways h4 { color: #166534; margin-bottom: 0.5rem; }
+    .takeaways li::before { content: '✓ '; color: #16a34a; font-weight: bold; }
+    .takeaways ul { list-style: none; padding-left: 0; }
+    .tips { background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 1.25rem; margin-top: 1rem; }
+    .tips h4 { color: #7c3aed; margin-bottom: 0.5rem; }
+    .tips li::before { content: '🛡️ '; }
+    .tips ul { list-style: none; padding-left: 0; }
+    .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; text-align: center; }
+    .highlight-box { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .warning-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .flow-diagram { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; margin: 1rem 0; padding: 1rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+    .flow-step { background: #e0f2fe; border: 1px solid #7dd3fc; border-radius: 6px; padding: 0.5rem 1.5rem; color: #0369a1; font-weight: 600; text-align: center; }
+    .flow-arrow { color: #94a3b8; font-size: 1.2rem; }
+    @media print { body { padding: 1rem; } h1 { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <h1>Cloud Security Basics</h1>
+  <h2>PhishShield — Cybersecurity Education Resource</h2>
+  <div class="meta">
+    <span>📂 Cloud Security</span>
+    <span>📊 Intermediate</span>
+    <span>📄 Guide</span>
+  </div>
+  <h3>Table of Contents</h3><ol><li>Cloud Service Models</li><li>Shared Responsibility Model</li><li>Identity & Access Management (IAM)</li><li>Cloud Storage Security</li><li>Misconfiguration Risks</li><li>Access Control</li><li>Cloud Monitoring</li><li>Cloud Security Best Practices</li></ol>
+  
+      <h3>Cloud Service Models</h3>
+      <ul>
+        <li><strong>SaaS (Software as a Service):</strong> Complete applications delivered over the internet. Examples: Gmail, Microsoft 365, Salesforce. Users manage data and access; provider manages everything else.</li>
+        <li><strong>PaaS (Platform as a Service):</strong> Development platforms in the cloud. Examples: Heroku, Google App Engine, Azure App Services. Users manage applications and data; provider manages infrastructure.</li>
+        <li><strong>IaaS (Infrastructure as a Service):</strong> Virtualized computing resources. Examples: AWS EC2, Azure VMs, Google Compute Engine. Users manage OS, applications, and data; provider manages physical infrastructure.</li>
+      </ul>
+
+      <h3>Shared Responsibility Model</h3>
+      <p>Security in the cloud is a shared responsibility between the cloud provider and the customer. The provider secures the infrastructure (physical security, networking, hypervisors), while the customer is responsible for securing their data, configurations, access controls, and applications.</p>
+      <div class="highlight-box">
+        <strong>Key Principle:</strong> The cloud provider is responsible for security OF the cloud. The customer is responsible for security IN the cloud.
+      </div>
+
+      <h3>Identity & Access Management (IAM)</h3>
+      <ul>
+        <li>Implement the principle of least privilege — users get only the access they need</li>
+        <li>Use role-based access control (RBAC) for systematic permission management</li>
+        <li>Enable MFA for all cloud console access</li>
+        <li>Avoid using root/admin accounts for daily operations</li>
+        <li>Regularly audit and review access permissions</li>
+        <li>Implement just-in-time (JIT) access for privileged operations</li>
+      </ul>
+
+      <h3>Cloud Storage Security</h3>
+      <ul>
+        <li>Enable encryption at rest for all storage services</li>
+        <li>Use server-side encryption with customer-managed keys (BYOK)</li>
+        <li>Implement access policies and bucket policies correctly</li>
+        <li>Enable versioning and logging for critical data</li>
+        <li>Regularly audit public access settings</li>
+      </ul>
+
+      <h3>Misconfiguration Risks</h3>
+      <p>Cloud misconfiguration is the #1 cause of cloud data breaches. Common misconfigurations:</p>
+      <ul>
+        <li>Publicly accessible storage buckets (S3, Blob Storage)</li>
+        <li>Overly permissive security groups and firewall rules</li>
+        <li>Unencrypted databases and storage</li>
+        <li>Default credentials on cloud services</li>
+        <li>Disabled logging and monitoring</li>
+      </ul>
+
+      <h3>Access Control</h3>
+      <ul>
+        <li>Implement network-level access controls (Security Groups, NACLs)</li>
+        <li>Use private endpoints for services that don't need public access</li>
+        <li>Implement VPC/VNet segmentation for workload isolation</li>
+        <li>Use service-level access policies (S3 bucket policies, Azure RBAC)</li>
+      </ul>
+
+      <h3>Cloud Monitoring</h3>
+      <ul>
+        <li>Enable AWS CloudTrail / Azure Activity Log / GCP Audit Logs</li>
+        <li>Set up alerts for security-relevant events</li>
+        <li>Use cloud-native SIEM solutions</li>
+        <li>Monitor for unusual API calls and access patterns</li>
+        <li>Implement automated compliance checking</li>
+      </ul>
+
+      <h3>Cloud Security Best Practices</h3>
+      <ul>
+        <li>Follow the Shared Responsibility Model</li>
+        <li>Implement least privilege access everywhere</li>
+        <li>Encrypt data at rest and in transit</li>
+        <li>Enable comprehensive logging and monitoring</li>
+        <li>Use Infrastructure as Code for consistent configurations</li>
+        <li>Regularly scan for misconfigurations</li>
+        <li>Implement backup and disaster recovery plans</li>
+        <li>Conduct regular security assessments and audits</li>
+      </ul>
+    
+  <div class="takeaways"><h4>✅ Key Takeaways</h4><ul><li>Cloud security is a shared responsibility between provider and customer</li><li>Misconfiguration is the #1 cause of cloud security breaches</li><li>IAM with least privilege access is critical in cloud environments</li><li>Encrypt data both at rest and in transit in the cloud</li><li>Enable logging and monitoring for all cloud resources</li></ul></div>
+  <div class="tips"><h4>🛡️ Security Tips</h4><ul><li>Never leave S3 buckets or storage blobs publicly accessible</li><li>Use cloud-native security tools (AWS GuardDuty, Azure Defender)</li><li>Implement Infrastructure as Code (IaC) for consistent security configurations</li><li>Rotate access keys and credentials regularly</li></ul></div>
+  <div class="footer">
+    <p>© 2026 PhishShield — Cybersecurity Awareness Portal</p>
+    <p>All resources are for cybersecurity education and awareness purposes only.</p>
+  </div>
+</body>
+</html>

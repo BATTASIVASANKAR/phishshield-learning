@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Security Checklist | PhishShield Resources</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #1e293b; max-width: 800px; margin: 0 auto; padding: 2rem; }
+    h1 { font-size: 1.8rem; color: #0f172a; margin-bottom: 0.5rem; border-bottom: 3px solid #0ea5e9; padding-bottom: 0.5rem; }
+    h2 { font-size: 1rem; color: #64748b; margin-bottom: 1.5rem; }
+    h3 { font-size: 1.2rem; color: #0f172a; margin: 1.5rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e2e8f0; }
+    p { margin-bottom: 0.75rem; font-size: 0.95rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; font-size: 0.92rem; }
+    strong { color: #0f172a; }
+    .meta { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .meta span { font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 4px; background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+    .takeaways { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 1.25rem; margin-top: 1.5rem; }
+    .takeaways h4 { color: #166534; margin-bottom: 0.5rem; }
+    .takeaways li::before { content: '✓ '; color: #16a34a; font-weight: bold; }
+    .takeaways ul { list-style: none; padding-left: 0; }
+    .tips { background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 1.25rem; margin-top: 1rem; }
+    .tips h4 { color: #7c3aed; margin-bottom: 0.5rem; }
+    .tips li::before { content: '🛡️ '; }
+    .tips ul { list-style: none; padding-left: 0; }
+    .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; text-align: center; }
+    .highlight-box { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .warning-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .flow-diagram { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; margin: 1rem 0; padding: 1rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+    .flow-step { background: #e0f2fe; border: 1px solid #7dd3fc; border-radius: 6px; padding: 0.5rem 1.5rem; color: #0369a1; font-weight: 600; text-align: center; }
+    .flow-arrow { color: #94a3b8; font-size: 1.2rem; }
+    @media print { body { padding: 1rem; } h1 { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <h1>Email Security Checklist</h1>
+  <h2>PhishShield — Cybersecurity Education Resource</h2>
+  <div class="meta">
+    <span>📂 Email Security</span>
+    <span>📊 Intermediate</span>
+    <span>📄 Checklist</span>
+  </div>
+  <h3>Table of Contents</h3><ol><li>Sender Verification</li><li>Domain Verification</li><li>Link Inspection</li><li>Attachment Safety</li><li>SPF (Sender Policy Framework)</li><li>DKIM (DomainKeys Identified Mail)</li><li>DMARC</li><li>Reply-To Checking</li><li>Phishing Detection</li><li>Reporting Suspicious Emails</li></ol>
+  
+      <h3>Sender Verification</h3>
+      <p>Always check the full email address, not just the display name. Attackers can set any display name they want. Look for:</p>
+      <ul>
+        <li>Misspelled domains (microsofft.com, amaz0n.com)</li>
+        <li>Extra subdomains (login.paypal.com.attacker.com)</li>
+        <li>Free email services claiming to be companies (paypal.support@gmail.com)</li>
+      </ul>
+
+      <h3>Domain Verification</h3>
+      <p>Verify the domain matches the organization's official domain. Cross-reference with the company's official website. Be aware of lookalike domains using special characters or alternative TLDs.</p>
+
+      <h3>Link Inspection</h3>
+      <ul>
+        <li>Hover over links to preview the actual URL</li>
+        <li>Check for HTTPS and valid SSL certificates</li>
+        <li>Be wary of URL shorteners (bit.ly, tinyurl.com)</li>
+        <li>Use URL scanners like VirusTotal before clicking suspicious links</li>
+        <li>Compare the URL domain with the official domain</li>
+      </ul>
+
+      <h3>Attachment Safety</h3>
+      <div class="warning-box">
+        <strong>🚨 High-Risk File Types:</strong> .exe, .scr, .js, .vbs, .bat, .cmd, .msi, .ps1, .zip (containing executables), .docm, .xlsm (macro-enabled Office files)
+      </div>
+      <ul>
+        <li>Never open unexpected attachments</li>
+        <li>Scan attachments with antivirus before opening</li>
+        <li>Be cautious of macro-enabled documents — disable macros by default</li>
+        <li>Verify with the sender through a separate channel if unsure</li>
+      </ul>
+
+      <h3>SPF (Sender Policy Framework)</h3>
+      <p>SPF allows domain owners to specify which mail servers are authorized to send emails on behalf of their domain. When an email arrives, the receiving server checks the SPF record to verify the sending server is authorized.</p>
+
+      <h3>DKIM (DomainKeys Identified Mail)</h3>
+      <p>DKIM adds a digital signature to outgoing emails. The receiving server can verify this signature against the public key in DNS to confirm the email was not altered in transit and was sent by an authorized server.</p>
+
+      <h3>DMARC</h3>
+      <p>DMARC builds on SPF and DKIM, telling receiving servers what to do when emails fail authentication (none, quarantine, or reject). It also provides reporting on email authentication results.</p>
+
+      <h3>Reply-To Checking</h3>
+      <p>The Reply-To address can be different from the sender address. Attackers may send from a legitimate-looking address but set the Reply-To to their own address to capture your responses.</p>
+
+      <h3>Phishing Detection</h3>
+      <ul>
+        <li>Check for urgency and threatening language</li>
+        <li>Look for spelling errors and unusual formatting</li>
+        <li>Verify requests through official channels</li>
+        <li>Be suspicious of requests for personal or financial information</li>
+        <li>Check email headers for authentication results (SPF pass/fail)</li>
+      </ul>
+
+      <h3>Reporting Suspicious Emails</h3>
+      <ul>
+        <li>Use the "Report Phishing" button in your email client</li>
+        <li>Forward phishing emails to your IT/security team</li>
+        <li>Report to reportphishing@apwg.org (Anti-Phishing Working Group)</li>
+        <li>Do not forward phishing emails to colleagues — report to IT only</li>
+        <li>Document the incident with screenshots and email headers</li>
+      </ul>
+    
+  <div class="takeaways"><h4>✅ Key Takeaways</h4><ul><li>SPF, DKIM, and DMARC together provide strong email authentication</li><li>Always verify the Reply-To address — it may differ from the sender</li><li>Dangerous attachments include .exe, .scr, .js, .vbs, and macro-enabled docs</li><li>Check email headers for authentication pass/fail results</li><li>Report phishing to protect yourself and others</li></ul></div>
+  <div class="tips"><h4>🛡️ Security Tips</h4><ul><li>Configure your email client to show full sender addresses</li><li>Disable automatic image loading in emails</li><li>Use email encryption (S/MIME or PGP) for sensitive communications</li><li>Set up email alerts for login from new devices</li></ul></div>
+  <div class="footer">
+    <p>© 2026 PhishShield — Cybersecurity Awareness Portal</p>
+    <p>All resources are for cybersecurity education and awareness purposes only.</p>
+  </div>
+</body>
+</html>

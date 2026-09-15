@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethical Hacking Roadmap | PhishShield Resources</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #1e293b; max-width: 800px; margin: 0 auto; padding: 2rem; }
+    h1 { font-size: 1.8rem; color: #0f172a; margin-bottom: 0.5rem; border-bottom: 3px solid #0ea5e9; padding-bottom: 0.5rem; }
+    h2 { font-size: 1rem; color: #64748b; margin-bottom: 1.5rem; }
+    h3 { font-size: 1.2rem; color: #0f172a; margin: 1.5rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e2e8f0; }
+    p { margin-bottom: 0.75rem; font-size: 0.95rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; font-size: 0.92rem; }
+    strong { color: #0f172a; }
+    .meta { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .meta span { font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 4px; background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+    .takeaways { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 1.25rem; margin-top: 1.5rem; }
+    .takeaways h4 { color: #166534; margin-bottom: 0.5rem; }
+    .takeaways li::before { content: '✓ '; color: #16a34a; font-weight: bold; }
+    .takeaways ul { list-style: none; padding-left: 0; }
+    .tips { background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 1.25rem; margin-top: 1rem; }
+    .tips h4 { color: #7c3aed; margin-bottom: 0.5rem; }
+    .tips li::before { content: '🛡️ '; }
+    .tips ul { list-style: none; padding-left: 0; }
+    .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; text-align: center; }
+    .highlight-box { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .warning-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .flow-diagram { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; margin: 1rem 0; padding: 1rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+    .flow-step { background: #e0f2fe; border: 1px solid #7dd3fc; border-radius: 6px; padding: 0.5rem 1.5rem; color: #0369a1; font-weight: 600; text-align: center; }
+    .flow-arrow { color: #94a3b8; font-size: 1.2rem; }
+    @media print { body { padding: 1rem; } h1 { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <h1>Ethical Hacking Roadmap</h1>
+  <h2>PhishShield — Cybersecurity Education Resource</h2>
+  <div class="meta">
+    <span>📂 Cybersecurity Careers</span>
+    <span>📊 Intermediate</span>
+    <span>📄 Roadmap</span>
+  </div>
+  <h3>Table of Contents</h3><ol><li>Career Path Overview</li><li>Networking</li><li>Linux</li><li>Python Programming</li><li>Web Security</li><li>OWASP Top 10</li><li>Burp Suite</li><li>Nmap & Reconnaissance</li><li>Vulnerability Assessment</li><li>Penetration Testing</li><li>Skills & Tools</li><li>Learning Resources</li><li>Certifications</li></ol>
+  
+      <h3>Ethical Hacking Career Path</h3>
+      <div class="flow-diagram">
+        <div class="flow-step">Networking</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Linux</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Python</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Web Security</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">OWASP Top 10</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Burp Suite</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Nmap & Recon</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Vulnerability Assessment</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Penetration Testing</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">🎯 Ethical Hacker</div>
+      </div>
+
+      <h3>Core Skills</h3>
+      <ul>
+        <li>TCP/IP networking, subnetting, routing, and DNS</li>
+        <li>Linux command line mastery (Kali Linux)</li>
+        <li>Python scripting for automation and exploit development</li>
+        <li>Web technologies (HTTP, HTML, JavaScript, SQL)</li>
+        <li>Vulnerability scanning and exploitation</li>
+        <li>Report writing and communication</li>
+      </ul>
+
+      <h3>Essential Tools</h3>
+      <ul>
+        <li><strong>Reconnaissance:</strong> Nmap, Amass, Shodan, theHarvester, Recon-ng</li>
+        <li><strong>Web Testing:</strong> Burp Suite, OWASP ZAP, Nikto, Dirb/Gobuster</li>
+        <li><strong>Exploitation:</strong> Metasploit, SQLMap, Hydra, John the Ripper</li>
+        <li><strong>Post-Exploitation:</strong> Mimikatz, BloodHound, Chisel</li>
+        <li><strong>Wireless:</strong> Aircrack-ng, Wifite, Kismet</li>
+        <li><strong>OS:</strong> Kali Linux, Parrot Security OS</li>
+      </ul>
+
+      <h3>Learning Resources</h3>
+      <ul>
+        <li><strong>Platforms:</strong> TryHackMe, HackTheBox, VulnHub, OverTheWire</li>
+        <li><strong>Courses:</strong> TCM Security, PortSwigger Web Academy, SANS</li>
+        <li><strong>Books:</strong> "The Web Application Hacker's Handbook", "Penetration Testing" by Georgia Weidman</li>
+        <li><strong>YouTube:</strong> NetworkChuck, John Hammond, IppSec, The Cyber Mentor</li>
+      </ul>
+
+      <h3>Professional Certifications</h3>
+      <ul>
+        <li><strong>Entry:</strong> CompTIA PenTest+, eJPT (eLearnSecurity)</li>
+        <li><strong>Intermediate:</strong> CEH (Certified Ethical Hacker), eCPPT</li>
+        <li><strong>Advanced:</strong> OSCP (Offensive Security Certified Professional), OSWE, OSCE³</li>
+        <li><strong>Expert:</strong> GXPN (GIAC), CREST CRT/CCT</li>
+      </ul>
+
+      <div class="warning-box">
+        <strong>⚠️ Legal Warning:</strong> Always obtain written permission before testing any system. Unauthorized hacking is a criminal offense. Only practice on systems you own or have explicit authorization to test.
+      </div>
+    
+  <div class="takeaways"><h4>✅ Key Takeaways</h4><ul><li>Strong networking and Linux skills are prerequisites for ethical hacking</li><li>Python is the most important programming language for ethical hackers</li><li>Understanding OWASP Top 10 is essential for web application testing</li><li>Always get written authorization before testing any system</li><li>CEH and OSCP are the most recognized ethical hacking certifications</li></ul></div>
+  <div class="tips"><h4>🛡️ Security Tips</h4><ul><li>Practice legally on platforms like HackTheBox, TryHackMe, and VulnHub</li><li>Build a home lab for safe practice — use VirtualBox or VMware</li><li>Document everything you learn in a personal knowledge base</li><li>Participate in CTF competitions to sharpen your skills</li></ul></div>
+  <div class="footer">
+    <p>© 2026 PhishShield — Cybersecurity Awareness Portal</p>
+    <p>All resources are for cybersecurity education and awareness purposes only.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Red Flags Checklist | PhishShield Resources</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #1e293b; max-width: 800px; margin: 0 auto; padding: 2rem; }
+    h1 { font-size: 1.8rem; color: #0f172a; margin-bottom: 0.5rem; border-bottom: 3px solid #0ea5e9; padding-bottom: 0.5rem; }
+    h2 { font-size: 1rem; color: #64748b; margin-bottom: 1.5rem; }
+    h3 { font-size: 1.2rem; color: #0f172a; margin: 1.5rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e2e8f0; }
+    p { margin-bottom: 0.75rem; font-size: 0.95rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; font-size: 0.92rem; }
+    strong { color: #0f172a; }
+    .meta { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .meta span { font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 4px; background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+    .takeaways { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 1.25rem; margin-top: 1.5rem; }
+    .takeaways h4 { color: #166534; margin-bottom: 0.5rem; }
+    .takeaways li::before { content: '✓ '; color: #16a34a; font-weight: bold; }
+    .takeaways ul { list-style: none; padding-left: 0; }
+    .tips { background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 1.25rem; margin-top: 1rem; }
+    .tips h4 { color: #7c3aed; margin-bottom: 0.5rem; }
+    .tips li::before { content: '🛡️ '; }
+    .tips ul { list-style: none; padding-left: 0; }
+    .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; text-align: center; }
+    .highlight-box { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .warning-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .flow-diagram { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; margin: 1rem 0; padding: 1rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+    .flow-step { background: #e0f2fe; border: 1px solid #7dd3fc; border-radius: 6px; padding: 0.5rem 1.5rem; color: #0369a1; font-weight: 600; text-align: center; }
+    .flow-arrow { color: #94a3b8; font-size: 1.2rem; }
+    @media print { body { padding: 1rem; } h1 { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <h1>Phishing Red Flags Checklist</h1>
+  <h2>PhishShield — Cybersecurity Education Resource</h2>
+  <div class="meta">
+    <span>📂 Phishing</span>
+    <span>📊 Beginner</span>
+    <span>📄 Checklist</span>
+  </div>
+  <h3>Table of Contents</h3><ol><li>Sender Verification</li><li>Domain Check</li><li>Link Inspection</li><li>Urgency Detection</li><li>Attachment Safety</li><li>Spelling & Grammar</li><li>Independent Verification</li><li>OTP Protection</li><li>Password Protection</li><li>MFA Enablement</li><li>Reporting</li></ol>
+  
+      <h3>Phishing Red Flags — Quick Reference</h3>
+      <p>Use this checklist every time you receive a suspicious email, SMS, or message. Check each item carefully before taking any action.</p>
+
+      <div class="highlight-box">
+        <strong>⚠️ If ANY of these red flags are present, treat the message as potentially malicious.</strong>
+      </div>
+
+      <h3>✅ Checklist Items</h3>
+      <ol>
+        <li><strong>Verify Sender:</strong> Check the sender's display name AND full email address. Attackers often use names like "PayPal Support" with addresses like support@paypa1-secure.com.</li>
+        <li><strong>Check Sender Domain:</strong> Inspect the domain after the @ symbol. Look for typosquatting: microsofft.com, amaz0n.com, g00gle.com. Compare with the official domain.</li>
+        <li><strong>Inspect Links:</strong> Hover over all links WITHOUT clicking. The actual URL should match the expected domain. Watch for URL shorteners (bit.ly) hiding real destinations.</li>
+        <li><strong>Watch for Urgent Language:</strong> "URGENT!", "Act within 24 hours!", "Your account will be terminated!" — Legitimate organizations rarely pressure you with extreme urgency.</li>
+        <li><strong>Avoid Unexpected Attachments:</strong> Never open attachments you weren't expecting, especially .exe, .zip, .js, .scr, or macro-enabled documents (.docm, .xlsm).</li>
+        <li><strong>Check Spelling & Grammar:</strong> While AI has improved phishing quality, many attacks still contain unusual phrasing, grammar mistakes, or formatting inconsistencies.</li>
+        <li><strong>Verify Independently:</strong> If a message claims to be from your bank or a service provider, contact them directly using the phone number or website you already know — NOT the one in the message.</li>
+        <li><strong>Never Share OTP:</strong> One-Time Passwords are for YOUR use only. No legitimate company will ever ask for your OTP via email, phone, or SMS.</li>
+        <li><strong>Never Share Passwords:</strong> No bank, company, or IT department will ever ask for your password. If asked, it's a scam. Period.</li>
+        <li><strong>Enable MFA:</strong> Multi-Factor Authentication is your strongest defense. Even if credentials are stolen, MFA prevents unauthorized access.</li>
+        <li><strong>Report Suspicious Messages:</strong> Forward phishing emails to your IT security team, use the "Report Phishing" button in your email client, and report to relevant authorities.</li>
+      </ol>
+
+      <div class="warning-box">
+        <strong>🚨 Remember:</strong> Phishing attacks are becoming increasingly sophisticated with AI. Even if a message looks perfect, always verify through independent channels before taking action.
+      </div>
+    
+  <div class="takeaways"><h4>✅ Key Takeaways</h4><ul><li>Always verify sender email addresses character by character</li><li>Hover over every link before clicking — compare with official URLs</li><li>Urgency is the #1 manipulation tactic in phishing</li><li>Never share OTPs or passwords with anyone, ever</li><li>Enable MFA as your strongest defense layer</li></ul></div>
+  <div class="tips"><h4>🛡️ Security Tips</h4><ul><li>Print this checklist and keep it at your desk</li><li>Share it with family members and colleagues</li><li>Review every unexpected email against this list</li><li>When in doubt, verify independently through official channels</li></ul></div>
+  <div class="footer">
+    <p>© 2026 PhishShield — Cybersecurity Awareness Portal</p>
+    <p>All resources are for cybersecurity education and awareness purposes only.</p>
+  </div>
+</body>
+</html>

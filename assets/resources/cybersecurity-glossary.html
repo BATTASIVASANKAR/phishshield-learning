@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Glossary | PhishShield Resources</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #1e293b; max-width: 800px; margin: 0 auto; padding: 2rem; }
+    h1 { font-size: 1.8rem; color: #0f172a; margin-bottom: 0.5rem; border-bottom: 3px solid #0ea5e9; padding-bottom: 0.5rem; }
+    h2 { font-size: 1rem; color: #64748b; margin-bottom: 1.5rem; }
+    h3 { font-size: 1.2rem; color: #0f172a; margin: 1.5rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e2e8f0; }
+    p { margin-bottom: 0.75rem; font-size: 0.95rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.4rem; font-size: 0.92rem; }
+    strong { color: #0f172a; }
+    .meta { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .meta span { font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 4px; background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+    .takeaways { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 1.25rem; margin-top: 1.5rem; }
+    .takeaways h4 { color: #166534; margin-bottom: 0.5rem; }
+    .takeaways li::before { content: '✓ '; color: #16a34a; font-weight: bold; }
+    .takeaways ul { list-style: none; padding-left: 0; }
+    .tips { background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 1.25rem; margin-top: 1rem; }
+    .tips h4 { color: #7c3aed; margin-bottom: 0.5rem; }
+    .tips li::before { content: '🛡️ '; }
+    .tips ul { list-style: none; padding-left: 0; }
+    .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; text-align: center; }
+    .highlight-box { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .warning-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .flow-diagram { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; margin: 1rem 0; padding: 1rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+    .flow-step { background: #e0f2fe; border: 1px solid #7dd3fc; border-radius: 6px; padding: 0.5rem 1.5rem; color: #0369a1; font-weight: 600; text-align: center; }
+    .flow-arrow { color: #94a3b8; font-size: 1.2rem; }
+    @media print { body { padding: 1rem; } h1 { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <h1>Cybersecurity Glossary</h1>
+  <h2>PhishShield — Cybersecurity Education Resource</h2>
+  <div class="meta">
+    <span>📂 Cybersecurity Basics</span>
+    <span>📊 Beginner</span>
+    <span>📄 Reference</span>
+  </div>
+  <h3>Table of Contents</h3><ol><li>Malware</li><li>Phishing</li><li>Exploit</li><li>Vulnerability</li><li>Risk</li><li>Encryption</li><li>Hashing</li><li>Firewall</li><li>SIEM</li><li>SOC</li><li>IDS</li><li>IPS</li><li>Honeypot</li><li>Threat Intelligence</li><li>Zero Trust</li><li>MITM</li><li>Botnet</li><li>Ransomware</li></ol>
+  
+      <h3>Malware</h3>
+      <p>Short for "malicious software." Any software intentionally designed to cause harm, including viruses, worms, Trojans, ransomware, spyware, adware, and rootkits.</p>
+
+      <h3>Phishing</h3>
+      <p>A social engineering attack that uses fake emails, websites, or messages to trick users into revealing sensitive information like passwords, credit card numbers, or personal data.</p>
+
+      <h3>Exploit</h3>
+      <p>A piece of code, software, or technique that takes advantage of a vulnerability in a system to cause unintended behavior, such as unauthorized access or code execution.</p>
+
+      <h3>Vulnerability</h3>
+      <p>A weakness or flaw in a system, application, or process that can be exploited by a threat actor. Examples: unpatched software, misconfigurations, weak passwords, insecure code.</p>
+
+      <h3>Risk</h3>
+      <p>The potential for loss or damage when a threat exploits a vulnerability. Calculated as: Risk = Threat × Vulnerability × Impact. Risk management aims to reduce risk to acceptable levels.</p>
+
+      <h3>Encryption</h3>
+      <p>The process of converting readable data (plaintext) into an unreadable format (ciphertext) using a cryptographic algorithm and key. Only authorized parties with the correct key can decrypt it. Common algorithms: AES, RSA, ChaCha20.</p>
+
+      <h3>Hashing</h3>
+      <p>A one-way function that converts input data into a fixed-size hash value. Unlike encryption, hashing is irreversible. Used for password storage, data integrity verification, and digital signatures. Common algorithms: SHA-256, bcrypt, Argon2.</p>
+
+      <h3>Firewall</h3>
+      <p>A network security device or software that monitors and filters incoming and outgoing network traffic based on predefined security rules. Acts as a barrier between trusted internal networks and untrusted external networks.</p>
+
+      <h3>SIEM (Security Information and Event Management)</h3>
+      <p>A platform that collects, correlates, and analyzes security event data from multiple sources across an organization. Provides real-time monitoring, threat detection, and incident response capabilities. Examples: Splunk, Microsoft Sentinel, QRadar.</p>
+
+      <h3>SOC (Security Operations Center)</h3>
+      <p>A centralized team and facility responsible for monitoring, detecting, analyzing, and responding to cybersecurity incidents 24/7. SOC analysts use SIEM, EDR, and other tools to protect the organization.</p>
+
+      <h3>IDS (Intrusion Detection System)</h3>
+      <p>A system that monitors network traffic or system activities for malicious activity or policy violations and sends alerts. Operates passively — does not block traffic. Types: Network-based (NIDS), Host-based (HIDS).</p>
+
+      <h3>IPS (Intrusion Prevention System)</h3>
+      <p>Similar to IDS but actively blocks detected threats in real-time. Sits inline with network traffic and can drop malicious packets, reset connections, or block source IPs automatically.</p>
+
+      <h3>Honeypot</h3>
+      <p>A decoy system or resource designed to attract and trap attackers. Used to study attack techniques, divert attackers from real systems, and collect threat intelligence.</p>
+
+      <h3>Threat Intelligence</h3>
+      <p>Evidence-based knowledge about existing or emerging threats, including context, mechanisms, indicators of compromise (IOCs), and actionable recommendations. Used to inform security decisions and improve defenses.</p>
+
+      <h3>Zero Trust</h3>
+      <p>A security model based on the principle "never trust, always verify." Every user, device, and connection must be continuously authenticated and authorized, regardless of whether they are inside or outside the network perimeter.</p>
+
+      <h3>MITM (Man-in-the-Middle)</h3>
+      <p>An attack where the attacker secretly intercepts and potentially alters communications between two parties who believe they are communicating directly. Common on unsecured Wi-Fi networks.</p>
+
+      <h3>Botnet</h3>
+      <p>A network of compromised computers (bots/zombies) controlled by an attacker (botmaster). Used for DDoS attacks, spam distribution, cryptocurrency mining, and credential stuffing at massive scale.</p>
+
+      <h3>Ransomware</h3>
+      <p>Malware that encrypts a victim's files and demands payment (usually cryptocurrency) for the decryption key. Modern ransomware often includes double extortion — threatening to leak stolen data if ransom isn't paid.</p>
+    
+  <div class="takeaways"><h4>✅ Key Takeaways</h4><ul><li>Understanding security terminology is the foundation of cybersecurity education</li><li>These terms appear across certifications, job roles, and daily security work</li><li>Keep this glossary as a quick reference for unfamiliar terms</li><li>Many terms are interconnected — understanding one helps understand others</li></ul></div>
+  <div class="tips"><h4>🛡️ Security Tips</h4><ul><li>Bookmark this glossary for quick reference</li><li>Test yourself: can you explain each term without looking?</li><li>Use these terms correctly in interviews and professional communication</li><li>Expand your vocabulary by reading security news and advisories</li></ul></div>
+  <div class="footer">
+    <p>© 2026 PhishShield — Cybersecurity Awareness Portal</p>
+    <p>All resources are for cybersecurity education and awareness purposes only.</p>
+  </div>
+</body>
+</html>
